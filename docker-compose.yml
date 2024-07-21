@@ -1,0 +1,13 @@
+version: "3.9"
+services:
+  detectit:
+    image: detectit
+    container_name: detectit
+    tty: true
+    restart: always
+    stdin_open: true
+    ports:
+      - "4011:3000"
+    build:
+      context: .
+      dockerfile: Dockerfile
