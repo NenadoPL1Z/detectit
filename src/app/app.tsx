@@ -1,5 +1,7 @@
-import "./app.css";
+import "./styles/index.css";
+import "./styles/app.css";
+import "normalize.css";
 
 export const App = () => {
-  return null;
+  return <h1>Test</h1>;
 };

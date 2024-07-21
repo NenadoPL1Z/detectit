@@ -1,5 +1,5 @@
 import axios from "axios";
-import { BASE_URL, TIMEOUT } from "../../../shared";
+import { BASE_URL, TIMEOUT } from "shared/constants";
 
 const createInstance = () => {
   return axios.create({

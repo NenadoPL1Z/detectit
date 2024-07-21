@@ -27,7 +27,8 @@
     "paths": {
       "app/*": ["app/*"],
       "pages/*": ["pages/*"],
-      "shared/*": ["app/*"],
+      "entities/*": ["entities/*"],
+      "shared/*": ["shared/*"],
     }
   },
   "include": ["src"]
