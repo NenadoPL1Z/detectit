@@ -1,3 +1,3 @@
-export const Root = () => {
-  return <div></div>;
+export const RootPage = () => {
+  return <div>root</div>;
 };

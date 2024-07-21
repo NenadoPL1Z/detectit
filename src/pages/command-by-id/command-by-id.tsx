@@ -1,3 +1,3 @@
-export const CommandById = () => {
-  return <div></div>;
+export const CommandByIdPage = () => {
+  return <div>command-id</div>;
 };
