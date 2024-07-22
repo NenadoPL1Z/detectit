@@ -27,7 +27,6 @@
     "paths": {
       "@app/*": ["app/*"],
       "@pages/*": ["pages/*"],
-      "@entities/*": ["entities/*"],
       "@shared/*": ["shared/*"],
     }
   },
