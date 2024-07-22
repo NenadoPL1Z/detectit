@@ -1,9 +1,19 @@
 @import "./fonts/bebasneue/bebasneue.css";
 @import "./fonts/montserrat/montserrat.css";
 
+
+:root {
+  --black: #000000;
+  --white: #FFFFFF;
+  --text-gray: #8E8E8E;
+  --card-gray: #CDCFCE;
+  --button-gray: #B2B2B2;
+}
+
 body {
   height: 100%;
   overflow-x: hidden;
+  background-color: var(--black);
 }
 
 *,
