@@ -1,5 +1,6 @@
 @import "./fonts/bebasneue/bebasneue.css";
 @import "./fonts/montserrat/montserrat.css";
+@import "./normalize.css";
 
 :root {
   --black: #000000;
@@ -50,15 +51,3 @@ button {
   flex-direction: column;
 }
 
-.container {
-  width: 100%;
-  max-width: 1040px;
-  padding: 0 16px;
-
-  margin: 0 auto;
-}
-
-.home-container {
-  display: flex;
-  flex-direction: column;
-}

@@ -34,3 +34,11 @@
 .gray {
   color: var(--text-gray);
 }
+
+.underline {
+  text-decoration: underline;
+}
+
+.centered {
+  text-align: center;
+}
