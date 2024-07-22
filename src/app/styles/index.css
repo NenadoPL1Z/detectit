@@ -1,13 +1,12 @@
 @import "./fonts/bebasneue/bebasneue.css";
 @import "./fonts/montserrat/montserrat.css";
 
-
 :root {
   --black: #000000;
-  --white: #FFFFFF;
-  --text-gray: #8E8E8E;
-  --card-gray: #CDCFCE;
-  --button-gray: #B2B2B2;
+  --white: #ffffff;
+  --text-gray: #8e8e8e;
+  --card-gray: #cdcfce;
+  --button-gray: #b2b2b2;
 }
 
 body {

@@ -1,37 +1,36 @@
 .b700 {
-    font-family: 'Bebas Neue', sans-serif;
-    font-weight: 700;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 700;
 }
 
 .b400 {
-    font-family: 'Bebas Neue', sans-serif;
-    font-weight: 400;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
 }
 
 .m700 {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
 }
 
 .m500 {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 500;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
 }
 
 .m400 {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 400;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
 }
 
 .black {
-    color: var(--black);
+  color: var(--black);
 }
 
 .white {
-    color: var(--white);
+  color: var(--white);
 }
 
 .gray {
-    color: var(--text-gray);
+  color: var(--text-gray);
 }
-
