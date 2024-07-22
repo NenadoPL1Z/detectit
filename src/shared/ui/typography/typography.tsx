@@ -4,13 +4,7 @@ import classnames from "classnames";
 
 const cn = classnames.bind(styles);
 
-export const Typography = ({
-  variant,
-  color = "white",
-  fontSize,
-  lineHeight,
-  children,
-}: TypographyProps) => {
+export const Typography = ({ variant, color = "white", fontSize, lineHeight, children }: TypographyProps) => {
   return (
     <div
       className={cn(styles[variant], styles[color])}
