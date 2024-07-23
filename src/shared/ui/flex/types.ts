@@ -1,6 +1,7 @@
 import { CSSProperties, ReactNode } from "react";
 
 type FlexProperties = {
+  className?: string;
   gap: number;
   vertical: boolean;
   grow: CSSProperties["flexGrow"];

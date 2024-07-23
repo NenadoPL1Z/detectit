@@ -1,0 +1,23 @@
+.footer {
+    background-color: #1A1A1A;
+    padding: 24px 24px 38px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper {
+    width: 100%;
+    max-width: 1200px;
+    border-bottom: 1px solid var(--white);
+    padding-bottom: 21px;
+}
+
+.logo {
+    margin-bottom: 44px;
+}
+
+
+.game {
+    margin-bottom: 7px;
+}
