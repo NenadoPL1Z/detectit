@@ -1,5 +1,12 @@
+.container {
+  background-image: url("/public/assets/images/404-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .wrapper {
   padding: 50px;
   width: 100%;
   max-width: 1315px;
+
 }

@@ -5,7 +5,7 @@ import styles from "./not-found.module.css";
 
 export const NotFoundPage = () => {
   return (
-    <Flex grow="1" align="center" justify="center">
+    <Flex className={styles.container} grow="1" align="center" justify="center">
       <Flex className={styles.wrapper} align="center">
         <Typography variant="b700" fontSize={350} lineHeight={300}>
           404
