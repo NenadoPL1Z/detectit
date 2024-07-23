@@ -1,14 +1,13 @@
 .header {
   width: 100%;
   overflow: hidden;
-  background-color: var(--black);
+  background-color: var(--gray);
   display: flex;
   justify-content: center;
 }
 
 .wrapper {
   width: 100%;
-  max-width: 1920px;
   padding: 30px 30px 0;
 
   display: flex;
@@ -23,31 +22,6 @@
   background-size: cover;
 }
 
-@media (min-width: 1925px) {
-  .wrapper::before {
-    content: "";
-
-    width: 20px;
-    height: 100%;
-    box-shadow: 20px 0 10px var(--black);
-
-    position: absolute;
-    left: -30px;
-    top: 0;
-  }
-
-  .wrapper::after {
-    content: "";
-
-    width: 20px;
-    height: 100%;
-    box-shadow: -20px 0 10px var(--black);
-
-    position: absolute;
-    right: -30px;
-    top: 0;
-  }
-}
 
 .logo {
   margin-bottom: 20px;
