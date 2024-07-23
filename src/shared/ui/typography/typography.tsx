@@ -14,12 +14,13 @@ export const Typography = ({
   lineHeight,
   underline,
   centered,
+  wrap,
   children,
 }: TypographyProps) => {
   const Tag = tags[tag ?? variant];
   return (
     <Tag
-      className={cn(styles[variant], styles[color], { underline, centered }, className)}
+      className={cn(styles[variant], styles[color], { underline, centered, wrap }, className)}
       style={{
         fontSize: `${fontSize}px`,
         lineHeight: `${lineHeight ?? fontSize}px`,

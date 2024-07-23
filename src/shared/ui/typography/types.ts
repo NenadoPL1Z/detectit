@@ -13,4 +13,5 @@ export type TypographyProps = {
   underline?: boolean;
   centered?: boolean;
   children: ReactNode;
+  wrap?: boolean;
 };

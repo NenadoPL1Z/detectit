@@ -1,23 +1,22 @@
-import { Typography } from "@shared/ui";
+import { Flex, Typography } from "@shared/ui";
+import { staticInfo } from "@shared/mock/static-info";
+import styles from "./root.module.css";
+import { Rating } from "./comonents/rating";
 
 export const RootPage = () => {
   return (
     <>
-      <Typography variant="b700" fontSize={52}>
-        Bebas Neue
-      </Typography>
-      <Typography variant="b400" fontSize={52}>
-        Bebas Neue
-      </Typography>
-      <Typography variant="m700" fontSize={52}>
-        Montserrat
-      </Typography>
-      <Typography variant="m500" fontSize={52}>
-        Montserrat
-      </Typography>
-      <Typography variant="m400" fontSize={52}>
-        Montserrat
-      </Typography>
+      <Flex tag="section" align="center">
+        <div className={styles.about}>
+          <Typography className={styles.aboutFirst} variant="m500" fontSize={18} lineHeight={30}>
+            {staticInfo.about.firstParagraph}
+          </Typography>
+          <Typography variant="m500" fontSize={18} lineHeight={30} wrap>
+            {staticInfo.about.secondParagraph}
+          </Typography>
+        </div>
+      </Flex>
+      <Rating />
     </>
   );
 };
