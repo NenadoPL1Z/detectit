@@ -5,7 +5,8 @@ import { GamesTable } from "./games-table";
 import { useRatingGames } from "./use-rating-games";
 
 export const RatingGames = () => {
-  const { search, loading, error, gamesDisplayed, isPagination, handleSearch, handleLoadMore } = useRatingGames();
+  const { localSearch, loading, error, gamesDisplayed, isPagination, setLocalSearch, handleLoadMore, handleSubmit } =
+    useRatingGames();
 
   return (
     <Flex tag="section" className={styles.container} vertical>
@@ -13,10 +14,12 @@ export const RatingGames = () => {
         <Input
           className={styles.input}
           placeholder="Название команды"
-          value={search}
-          onChange={(e) => handleSearch(e.target.value)}
+          value={localSearch}
+          onChange={(e) => setLocalSearch(e.target.value)}
         />
-        <Button className={styles.button}>ПОСМОТРЕТЬ СТАТИСТИКУ</Button>
+        <Button className={styles.button} onClick={handleSubmit}>
+          ПОСМОТРЕТЬ СТАТИСТИКУ
+        </Button>
       </Flex>
       <GamesTable
         games={gamesDisplayed}

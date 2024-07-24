@@ -7,6 +7,7 @@ import { filterSearch } from "./helpers";
 
 export const useRatingGames = () => {
   const [search, setSearch] = useState("");
+  const [localSearch, setLocalSearch] = useState("");
   const [games, setGames] = useState<GameModel[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
@@ -16,13 +17,13 @@ export const useRatingGames = () => {
   const gamesDisplayed = games.filter(filterSearch(search)).slice(page, countDisplayElement);
   const isPagination = games.length === countDisplayElement;
 
-  const handleSearch = (text: string) => {
-    setPage(0);
-    setSearch(text);
-  };
-
   const handleLoadMore = () => {
     setPage((page) => page + 1);
+  };
+
+  const handleSubmit = () => {
+    setSearch(localSearch);
+    setPage(0);
   };
 
   const getGames = async () => {
@@ -48,12 +49,13 @@ export const useRatingGames = () => {
   }, []);
 
   return {
-    search,
+    localSearch,
     loading,
     error,
     gamesDisplayed,
     isPagination,
-    handleSearch,
+    handleSubmit,
     handleLoadMore,
+    setLocalSearch,
   };
 };
