@@ -1,4 +1,5 @@
 import { GamesTableProps } from "./types";
-export const GamesTable = ({ games, loading, error }: GamesTableProps) => {
-  return <div>{JSON.stringify(games)}</div>;
+import Spinner from "@shared/assets/icons/spinner.svg?react";
+export const GamesTable = ({ loading }: GamesTableProps) => {
+  return <div>{loading && <Spinner />}</div>;
 };
