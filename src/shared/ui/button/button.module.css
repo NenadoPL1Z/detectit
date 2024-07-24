@@ -1,17 +1,17 @@
 .button {
-    padding: 16px 37px;
+  padding: 16px 37px;
 
-    background-color: #B2B2B2;
-    color: var(--black);
+  background-color: #b2b2b2;
+  color: var(--black);
 
-    font-family: "Montserrat", sans-serif;
-    font-size: 18px;
-    font-weight: 400;
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
 
-    transition: .2s all linear;
+  transition: 0.2s all linear;
 }
 
 .button:hover {
-    color: var(--white);
-    background-color: var(--gray);
+  color: var(--white);
+  background-color: var(--gray);
 }
