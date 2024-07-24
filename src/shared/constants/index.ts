@@ -1,2 +1,2 @@
-export { BASE_URL, TIMEOUT } from "./api";
+export * from "./api";
 export { NavigationRoutes } from "./routes";

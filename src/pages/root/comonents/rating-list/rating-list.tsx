@@ -1,10 +1,15 @@
 import { Flex } from "@shared/ui";
 import { Input, Button } from "@shared/ui";
 import styles from "./raiting-list.module.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { apiGetAllRatings } from "@entities/api";
 
 export const RatingList = () => {
   const [search, setSearch] = useState("");
+
+  useEffect(() => {
+    apiGetAllRatings();
+  }, []);
 
   return (
     <Flex tag="section" className={styles.container} vertical>
