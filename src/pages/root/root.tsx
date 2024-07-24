@@ -2,6 +2,7 @@ import { Flex, Typography } from "@shared/ui";
 import { staticInfo } from "@shared/mock/static-info";
 import styles from "./root.module.css";
 import { Rating } from "./comonents/rating";
+import { RatingList } from "@pages/root/comonents/rating-list/rating-list";
 
 export const RootPage = () => {
   return (
@@ -17,6 +18,7 @@ export const RootPage = () => {
         </div>
       </Flex>
       <Rating />
+      <RatingList />
     </>
   );
 };
