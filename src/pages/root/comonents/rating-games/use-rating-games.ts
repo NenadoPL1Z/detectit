@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { FormEventHandler, useEffect, useState } from "react";
 import { GameModel } from "@shared/types";
 import { apiGetAllRatings } from "@entities/api";
 import { isAxiosError } from "axios";
@@ -14,14 +14,15 @@ export const useRatingGames = () => {
   const [page, setPage] = useState(0);
 
   const countDisplayElement = (page + 1) * RATING_GAMES_LIMIT;
-  const gamesDisplayed = games.filter(filterSearch(search)).slice(page, countDisplayElement);
+  const gamesDisplayed = games.filter(filterSearch(search));
   const isPagination = games.length === countDisplayElement;
 
   const handleLoadMore = () => {
     setPage((page) => page + 1);
   };
 
-  const handleSubmit = () => {
+  const handleSubmit: FormEventHandler<HTMLFormElement> = (e) => {
+    e.preventDefault();
     setSearch(localSearch);
     setPage(0);
   };

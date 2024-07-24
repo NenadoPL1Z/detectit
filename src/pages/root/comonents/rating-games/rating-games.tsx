@@ -10,17 +10,19 @@ export const RatingGames = () => {
 
   return (
     <Flex tag="section" className={styles.container} vertical>
-      <Flex className={styles.search} vertical={false} align="center" gap={8}>
-        <Input
-          className={styles.input}
-          placeholder="Название команды"
-          value={localSearch}
-          onChange={(e) => setLocalSearch(e.target.value)}
-        />
-        <Button className={styles.button} onClick={handleSubmit}>
-          ПОСМОТРЕТЬ СТАТИСТИКУ
-        </Button>
-      </Flex>
+      <form onSubmit={handleSubmit}>
+        <Flex className={styles.form} vertical={false} align="center" gap={8}>
+          <Input
+            className={styles.input}
+            placeholder="Название команды"
+            value={localSearch}
+            onChange={(e) => setLocalSearch(e.target.value)}
+          />
+          <Button className={styles.button} type="submit">
+            ПОСМОТРЕТЬ СТАТИСТИКУ
+          </Button>
+        </Flex>
+      </form>
       <GamesTable
         games={gamesDisplayed}
         loading={loading}

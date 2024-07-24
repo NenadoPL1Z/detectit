@@ -11,7 +11,17 @@
   transition: 0.2s all linear;
 }
 
-.button:hover {
-  color: var(--white);
-  background-color: var(--gray);
+
+@media(hover: hover) {
+  .button:hover {
+    color: var(--white);
+    background-color: var(--gray);
+  }
+}
+
+@media(hover: none) {
+  .button:active {
+    color: var(--white);
+    background-color: var(--gray);
+  }
 }
