@@ -1,5 +1,5 @@
 import { RatingSwiper } from "./comonents/rating-swiper";
-import { RatingList } from "./comonents/rating-list";
+import { RatingGames } from "./comonents/rating-games";
 import { RatingAbout } from "./comonents/rating-about";
 
 export const RootPage = () => {
@@ -7,7 +7,7 @@ export const RootPage = () => {
     <>
       <RatingAbout />
       <RatingSwiper />
-      <RatingList />
+      <RatingGames />
     </>
   );
 };

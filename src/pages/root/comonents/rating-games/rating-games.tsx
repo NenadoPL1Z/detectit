@@ -1,14 +1,14 @@
 import { Flex } from "@shared/ui";
 import { Input, Button } from "@shared/ui";
-import styles from "./raiting-list.module.css";
+import styles from "./raiting-games.module.css";
 import { useEffect, useState } from "react";
 import { apiGetAllRatings } from "@entities/api";
 import { GameModel } from "@shared/types";
 import { isAxiosError } from "axios";
+import { RATING_GAMES_ERROR_MESSAGE } from "./constants";
+import { GamesTable } from "./games-table";
 
-const ERROR_MESSAGE = "Ошибка при попытке получения рейтинга команд. Попробуйте позже или обновите страницу";
-
-export const RatingList = () => {
+export const RatingGames = () => {
   const [search, setSearch] = useState("");
   const [games, setGames] = useState<GameModel[]>([]);
   const [loading, setLoading] = useState(true);
@@ -23,7 +23,11 @@ export const RatingList = () => {
         setLoading(false);
       })
       .catch((error) => {
-        setError(isAxiosError<string>(error) ? (error.response?.data ?? ERROR_MESSAGE) : ERROR_MESSAGE);
+        if (isAxiosError(error)) {
+          setError(error.response?.data ?? RATING_GAMES_ERROR_MESSAGE);
+        } else {
+          setError(RATING_GAMES_ERROR_MESSAGE);
+        }
         setLoading(false);
       });
   };
@@ -34,7 +38,7 @@ export const RatingList = () => {
 
   return (
     <Flex tag="section" className={styles.container} vertical>
-      <Flex vertical={false} align="center" gap={8}>
+      <Flex className={styles.search} vertical={false} align="center" gap={8}>
         <Input
           className={styles.input}
           placeholder="Название команды"
@@ -43,6 +47,7 @@ export const RatingList = () => {
         />
         <Button className={styles.button}>ПОСМОТРЕТЬ СТАТИСТИКУ</Button>
       </Flex>
+      <GamesTable games={games} loading={loading} error={error} />
     </Flex>
   );
 };
