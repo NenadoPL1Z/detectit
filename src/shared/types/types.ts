@@ -7,3 +7,10 @@ export type GameModel = {
   third_places: number;
   rank: string;
 };
+
+export type DetectiveModel = {
+  rank: string;
+  points: number;
+  image: string;
+  description: string;
+};
