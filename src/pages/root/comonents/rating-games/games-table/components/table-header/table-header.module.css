@@ -6,3 +6,7 @@
   font-weight: 500;
   font-family: var(--montserrat);
 }
+
+.border-off {
+  text-align: left;
+}

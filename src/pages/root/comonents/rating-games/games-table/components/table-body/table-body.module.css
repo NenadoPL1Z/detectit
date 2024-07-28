@@ -4,12 +4,13 @@
   font-family: var(--bebas);
   color: var(--white);
   padding: 20px 15px;
+  border-right: 1px solid var(--white);
 }
 
 .align-left {
   text-align: left;
 }
 
-.border {
-  border-right: 1px solid var(--white);
+.disabled-border {
+  border-right: 0;
 }

@@ -8,16 +8,7 @@ export const GamesTable = ({ games }: GamesTableProps) => {
     <section className={styles.container}>
       <table className={styles.table} cellSpacing="0" cellPadding="0">
         <thead>
-          <tr>
-            <TableHeader align="left" header="№ Название команды" />
-            <TableHeader header="Кол-во баллов" />
-            <TableHeader header="Звание" />
-            <TableHeader header="Кол-во игр" />
-            <TableHeader header=" " />
-            <TableHeader header="Кол-во 1 мест" />
-            <TableHeader header="Кол-во 2 мест" />
-            <TableHeader header="Кол-во 3 мест" />
-          </tr>
+          <TableHeader />
         </thead>
         <tbody>
           {games.map((game, index) => (

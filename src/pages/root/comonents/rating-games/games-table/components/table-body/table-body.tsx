@@ -15,17 +15,17 @@ export const TableBody = ({
 }: TableBodyProps) => {
   return (
     <tr>
-      <th className={cn(styles.body, { "align-left": true, border: true })}>
+      <th className={cn(styles.body, { "align-left": true })}>
         {number + 1}.&nbsp;&nbsp;&nbsp;
         {team}
       </th>
-      <th className={cn(styles.body, { "align-left": false, border: true })}>{total_points}</th>
-      <th className={cn(styles.body, { "align-left": false, border: true })}>{rank}</th>
-      <th className={cn(styles.body, { "align-left": false, border: true })}>{total_games}</th>
-      <th className={cn(styles.body, { "align-left": false, border: true })}> </th>
-      <th className={cn(styles.body, { "align-left": false, border: true })}>{first_places}</th>
-      <th className={cn(styles.body, { "align-left": false, border: true })}>{second_places}</th>
-      <th className={cn(styles.body, { "align-left": false, border: false })}>{third_places}</th>
+      <th className={cn(styles.body)}>{total_points}</th>
+      <th className={cn(styles.body)}>{rank}</th>
+      <th className={cn(styles.body)}>{total_games}</th>
+      <th className={cn(styles.body)}> </th>
+      <th className={cn(styles.body)}>{first_places}</th>
+      <th className={cn(styles.body)}>{second_places}</th>
+      <th className={cn(styles.body, { "border-off": true })}>{third_places}</th>
     </tr>
   );
 };
