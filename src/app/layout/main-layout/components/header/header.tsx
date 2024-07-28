@@ -6,10 +6,12 @@ export const Header = () => {
   return (
     <header className={styles.header}>
       <div className={styles.wrapper}>
-        <Logo className={styles.logo} />
-        <Typography variant="b700" fontSize={96}>
-          Рейтинг команд
-        </Typography>
+        <div className={styles.backdoor}>
+          <Logo className={styles.logo} />
+          <Typography className={styles.title} variant="b700">
+            Рейтинг команд
+          </Typography>
+        </div>
       </div>
     </header>
   );
