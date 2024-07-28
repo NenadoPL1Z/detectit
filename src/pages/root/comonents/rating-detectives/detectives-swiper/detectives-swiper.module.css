@@ -29,3 +29,13 @@
 .slide {
   width: 520px !important;
 }
+
+@media (max-width: 1024px) {
+  .button {
+    display: none;
+  }
+
+  .slide {
+    width: 220px !important;
+  }
+}
