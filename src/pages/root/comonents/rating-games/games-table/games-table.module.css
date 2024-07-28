@@ -1,6 +1,6 @@
 .container {
   border: 10px solid var(--white);
-  background: url("public/assets/images/table-bg.png");
+  background-image: url("public/assets/images/table-bg.png");
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -8,4 +8,10 @@
 .table {
   width: 100%;
   border: 0;
+  position: relative;
+}
+
+.thead {
+  position: sticky;
+  top: 0; /* Don't forget this, required for the stickiness */
 }

@@ -9,7 +9,7 @@ export const GamesTable = (props: GamesTableProps) => {
   return (
     <section className={styles.container}>
       <table className={styles.table} cellSpacing="0" cellPadding="0">
-        <thead>
+        <thead className={styles.thead}>
           <TableHeader />
         </thead>
         <tbody>
