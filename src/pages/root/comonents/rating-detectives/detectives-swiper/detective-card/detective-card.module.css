@@ -104,7 +104,6 @@
   object-fit: cover;
 }
 
-
 @media (max-width: 1024px) {
   .container {
     width: 220px;
@@ -149,7 +148,7 @@
 
   .points-count {
     padding: 0;
-    border-bottom: 0
+    border-bottom: 0;
   }
 
   .description {
