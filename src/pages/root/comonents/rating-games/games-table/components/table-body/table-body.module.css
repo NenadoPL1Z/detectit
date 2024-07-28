@@ -7,6 +7,36 @@
   border-right: 1px solid var(--white);
 }
 
+.team {
+  word-wrap: break-word;
+  max-width: 250px;
+}
+
+.total-points {
+}
+
+.rank {
+}
+
+.total-games {
+}
+
+.empty {
+  width: 10%;
+}
+
+.first-places {
+
+}
+
+.second-places {
+
+}
+
+.third-places {
+
+}
+
 .align-left {
   text-align: left;
 }
