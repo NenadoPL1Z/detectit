@@ -6,16 +6,14 @@ import { useRatingGames } from "./use-rating-games";
 
 export const RatingGames = () => {
   const {
-    localSearch,
-    loading,
-    error,
     gamesDisplayed,
-    isPagination,
+    localSearch,
     setLocalSearch,
     handleLoadMore,
     handleRetry,
     handleClear,
     handleSubmit,
+    ...displays
   } = useRatingGames();
 
   return (
@@ -35,12 +33,10 @@ export const RatingGames = () => {
       </form>
       <GamesTable
         games={gamesDisplayed}
-        loading={loading}
-        error={error}
-        isPagination={isPagination}
         onLoadMore={handleLoadMore}
         onRetry={handleRetry}
         onClear={handleClear}
+        {...displays}
       />
     </Flex>
   );

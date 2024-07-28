@@ -1,5 +1,12 @@
 import { GamesTableProps } from "../../types";
 export type TableFooterProps = Pick<
   GamesTableProps,
-  "loading" | "error" | "isPagination" | "games" | "onRetry" | "onLoadMore" | "onClear"
+  | "isDisplayLoading"
+  | "isDisplayEmpty"
+  | "isDisplayError"
+  | "isDisplayMore"
+  | "games"
+  | "onRetry"
+  | "onLoadMore"
+  | "onClear"
 >;

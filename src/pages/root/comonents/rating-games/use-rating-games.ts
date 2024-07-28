@@ -17,6 +17,11 @@ export const useRatingGames = () => {
   const gamesDisplayed = games.filter(filterSearch(search)).slice(0, page * RATING_GAMES_LIMIT);
   const isPagination = gamesDisplayed.length === countDisplayElement;
 
+  const isDisplayLoading = Boolean(loading && !error && !games.length);
+  const isDisplayEmpty = Boolean(!games.length && !error && !loading);
+  const isDisplayError = Boolean(error && !games.length);
+  const isDisplayMore = Boolean(games.length && !error && !loading && isPagination);
+
   const handleLoadMore = () => {
     setPage((page) => page + 1);
   };
@@ -59,15 +64,16 @@ export const useRatingGames = () => {
   }, []);
 
   return {
-    localSearch,
-    loading,
-    error,
+    isDisplayLoading,
+    isDisplayEmpty,
+    isDisplayError,
+    isDisplayMore,
     gamesDisplayed,
-    isPagination,
+    localSearch,
+    setLocalSearch,
     handleSubmit,
     handleLoadMore,
     handleRetry,
     handleClear,
-    setLocalSearch,
   };
 };

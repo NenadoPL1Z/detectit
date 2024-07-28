@@ -6,20 +6,15 @@ import classnames from "classnames/bind";
 const cn = classnames.bind(styles);
 
 export const TableFooter = ({
-  loading,
-  error,
-  games,
-  isPagination,
+  isDisplayLoading,
+  isDisplayError,
+  isDisplayEmpty,
+  isDisplayMore,
   onLoadMore,
   onRetry,
   onClear,
 }: TableFooterProps) => {
-  const isDisplayLoading = Boolean(loading && !error && !games.length);
-  const isDisplayError = Boolean(error && !games.length);
-  const isEmpty = Boolean(!games.length && !error && !loading);
-  const isDisplayMore = Boolean(games.length && !error && !loading && isPagination);
-
-  const bottomOff = !isDisplayLoading && !isDisplayError && !isDisplayMore && !isEmpty;
+  const bottomOff = !isDisplayLoading && !isDisplayError && !isDisplayMore && !isDisplayEmpty;
 
   return (
     <Flex className={cn(styles["table-bottom"], { "bottom-off": bottomOff })} align="center" justify="center">
@@ -29,7 +24,7 @@ export const TableFooter = ({
           ПОКАЗАТЬ ЕЩЕ
         </Button>
       )}
-      {isEmpty && (
+      {isDisplayEmpty && (
         <>
           <Typography variant="m700" fontSize={24} wrap centered className={styles.error}>
             Пусто!{"\n"}
