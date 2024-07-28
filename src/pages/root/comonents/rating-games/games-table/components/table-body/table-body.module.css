@@ -1,15 +1,15 @@
 .body {
-    font-size: 24px;
-    line-height: 30px;
-    font-family: var(--bebas);
-    color: var(--white);
-    padding: 20px 15px;
+  font-size: 24px;
+  line-height: 30px;
+  font-family: var(--bebas);
+  color: var(--white);
+  padding: 20px 15px;
 }
 
 .align-left {
-    text-align: left;
+  text-align: left;
 }
 
 .border {
-    border-right: 1px solid var(--white);
+  border-right: 1px solid var(--white);
 }
