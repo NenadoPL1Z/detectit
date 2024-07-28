@@ -1,9 +1,11 @@
 import { TableBodyProps } from "./types";
 import styles from "./table-body.module.css";
 import classnames from "classnames/bind";
+import { NavigationRoutes } from "@shared/constants";
 const cn = classnames.bind(styles);
 
 export const TableBody = ({
+  id,
   number,
   team,
   total_points,
@@ -17,7 +19,9 @@ export const TableBody = ({
     <tr>
       <th className={cn(styles.body, styles.team, { "align-left": true })}>
         {number + 1}.&nbsp;&nbsp;&nbsp;
-        {team}
+        <a href={`${NavigationRoutes.COMMANDS.path}/${id}`} target="_blank" rel="noreferrer">
+          <span>{team}</span>
+        </a>
       </th>
       <th className={cn(styles.body, styles["total-points"])}>{total_points}</th>
       <th className={cn(styles.body, styles["rank"])}>{rank}</th>

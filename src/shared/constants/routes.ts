@@ -1,5 +1,8 @@
 export const NavigationRoutes = {
   ROOT: "/",
-  COMMANDS_BY_ID: "/command/:id",
+  COMMANDS: {
+    path: "/command",
+    full: "/command/:id",
+  },
   NOT_FOUND: "*",
 };

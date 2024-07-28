@@ -12,6 +12,11 @@
   max-width: 250px;
 }
 
+.team > a > span {
+  text-decoration: underline;
+}
+
+
 .total-points {
 }
 
@@ -26,15 +31,12 @@
 }
 
 .first-places {
-
 }
 
 .second-places {
-
 }
 
 .third-places {
-
 }
 
 .align-left {

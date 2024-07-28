@@ -10,7 +10,7 @@ export const App = () => {
       <MainLayout>
         <Routes>
           <Route path={NavigationRoutes.ROOT} element={<RootPage />} />
-          <Route path={NavigationRoutes.COMMANDS_BY_ID} element={<CommandByIdPage />} />
+          <Route path={NavigationRoutes.COMMANDS.full} element={<CommandByIdPage />} />
           <Route path={NavigationRoutes.NOT_FOUND} element={<NotFoundPage />} />
         </Routes>
       </MainLayout>
