@@ -2,8 +2,10 @@ import { GamesTableProps } from "./types";
 import styles from "./games-table.module.css";
 import { TableHeader } from "./components/table-header";
 import { TableBody } from "./components/table-body";
+import { TableFooter } from "./components/table-footer";
 
-export const GamesTable = ({ games }: GamesTableProps) => {
+export const GamesTable = (props: GamesTableProps) => {
+  const { games } = props;
   return (
     <section className={styles.container}>
       <table className={styles.table} cellSpacing="0" cellPadding="0">
@@ -16,6 +18,7 @@ export const GamesTable = ({ games }: GamesTableProps) => {
           ))}
         </tbody>
       </table>
+      <TableFooter {...props} />
     </section>
   );
 };

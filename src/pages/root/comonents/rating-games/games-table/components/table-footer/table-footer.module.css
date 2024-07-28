@@ -1,0 +1,16 @@
+.table-bottom {
+    border-top: 1px solid var(--white);
+    padding: 30px;
+}
+
+.borer-off {
+    border-top: 0;
+}
+
+.button {
+    min-width: 337px;
+}
+
+.error {
+    margin-bottom: 25px;
+}

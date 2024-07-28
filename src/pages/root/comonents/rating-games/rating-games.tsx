@@ -5,8 +5,17 @@ import { GamesTable } from "./games-table";
 import { useRatingGames } from "./use-rating-games";
 
 export const RatingGames = () => {
-  const { localSearch, loading, error, gamesDisplayed, isPagination, setLocalSearch, handleLoadMore, handleSubmit } =
-    useRatingGames();
+  const {
+    localSearch,
+    loading,
+    error,
+    gamesDisplayed,
+    isPagination,
+    setLocalSearch,
+    handleLoadMore,
+    handleRetry,
+    handleSubmit,
+  } = useRatingGames();
 
   return (
     <Flex tag="section" className={styles.container} vertical>
@@ -29,6 +38,7 @@ export const RatingGames = () => {
         error={error}
         isPagination={isPagination}
         onLoadMore={handleLoadMore}
+        onRetry={handleRetry}
       />
     </Flex>
   );

@@ -45,6 +45,10 @@ export const useRatingGames = () => {
       });
   };
 
+  const handleRetry = () => {
+    getGames();
+  };
+
   useEffect(() => {
     getGames();
   }, []);
@@ -57,6 +61,7 @@ export const useRatingGames = () => {
     isPagination,
     handleSubmit,
     handleLoadMore,
+    handleRetry,
     setLocalSearch,
   };
 };
