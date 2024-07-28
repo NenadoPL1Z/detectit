@@ -10,5 +10,8 @@
 }
 
 .detectives {
-  overflow: scroll;
+}
+
+.slide {
+  width: 520px !important;
 }
