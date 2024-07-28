@@ -11,7 +11,7 @@ export type GameModel = {
 
 export type DetectiveModel = {
   rank: string;
-  points: number;
+  points: string;
   image: string;
   description: string;
 };

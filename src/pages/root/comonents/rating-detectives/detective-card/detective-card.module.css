@@ -1,11 +1,96 @@
 .container {
-  width: 100%;
-  max-width: 520px;
+  width: 520px;
   height: 340px;
-  background-color: #cdcfce;
   padding: 15px 30px;
+  background-color: #cdcfce;
+  position: relative;
+  overflow: hidden;
 }
 
+
 .top {
-  margin-bottom: 8px;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.number {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.rank {
+  max-width: 254px;
+  flex-grow: 1;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--black);
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.points {
+  max-width: 313px;
+  margin-bottom: 30px;
+}
+
+.points-label {
+  text-transform: uppercase;
+}
+
+.points-count {
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--black);
+}
+
+.description {
+  max-width: 290px;
+}
+
+.description-label {
+  text-transform: uppercase;
+}
+
+.description-text {
+  padding: 8px;
+  border: 1px solid var(--black);
+}
+
+.image {
+  width: 166px;
+  height: 201px;
+
+  position: absolute;
+  right: 12px;
+  top: 90px;
+}
+
+.image-wrapper {
+  width: inherit;
+  height: inherit;
+
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: white;
+  transform: rotate(5deg);
+}
+
+.image-clip {
+  width: 38px;
+  height: 45px;
+
+  position: absolute;
+  right: -5px;
+  top: -20px;
+  z-index: 1;
+  transform: rotate(-5deg);
+}
+
+.image-rank {
+  width: 146px;
+  height: 181px;
+  object-fit: cover;
 }
