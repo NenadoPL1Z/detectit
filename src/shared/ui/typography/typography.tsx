@@ -22,8 +22,8 @@ export const Typography = ({
     <Tag
       className={cn(styles[variant], styles[color], { underline, centered, wrap }, className)}
       style={{
-        fontSize: `${fontSize}px`,
-        lineHeight: `${lineHeight ?? fontSize}px`,
+        fontSize: fontSize ? `${fontSize}px` : "",
+        lineHeight: lineHeight || fontSize ? `${lineHeight ?? fontSize}px` : "",
       }}>
       {children}
     </Tag>

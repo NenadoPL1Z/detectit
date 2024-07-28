@@ -7,13 +7,13 @@ export const NotFoundPage = () => {
   return (
     <Flex className={styles.container} grow="1" align="center" justify="center">
       <Flex className={styles.wrapper} align="center">
-        <Typography variant="b700" fontSize={350} lineHeight={300}>
+        <Typography className={styles.title} variant="b700">
           404
         </Typography>
-        <Typography variant="m500" fontSize={48} centered>
+        <Typography className={styles.description} variant="m500" centered>
           В данный момент идет расследование этого дела, а пока вы можете вернуться на{" "}
           <Link to={NavigationRoutes.ROOT}>
-            <Typography tag="span" variant="m700" fontSize={48} underline centered>
+            <Typography tag="span" variant="m700" underline centered>
               главную
             </Typography>
           </Link>

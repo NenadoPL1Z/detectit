@@ -8,7 +8,7 @@ export type TypographyProps = {
   tag?: Tag;
   variant: Variant;
   color?: "black" | "white" | "gray";
-  fontSize: number;
+  fontSize?: number;
   lineHeight?: number;
   underline?: boolean;
   centered?: boolean;

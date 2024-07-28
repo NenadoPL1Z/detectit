@@ -9,3 +9,26 @@
   width: 100%;
   max-width: 1315px;
 }
+
+.title {
+  font-size: 350px;
+  line-height: 300px;
+}
+
+.description {
+  font-size: 48px;
+  line-height: 48px;
+}
+
+@media (max-width: 1024px) {
+  .title {
+    font-size: 96px;
+    line-height: 96px;
+  }
+
+  .description {
+    font-size: 14px;
+    line-height: 14px;
+    max-width: 380px;
+  }
+}

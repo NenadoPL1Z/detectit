@@ -39,7 +39,7 @@ export const DetectivesSwiper = () => {
           <SwiperPrevButton />
         </button>
       )}
-      <Swiper spaceBetween={110} loop slidesPerView="auto" navigation onSwiper={onSwiper}>
+      <Swiper spaceBetween={110} allowTouchMove={false} loop slidesPerView="auto" navigation onSwiper={onSwiper}>
         {detectivesInfo.map((detective, index) => (
           <SwiperSlide className={styles.slide} key={detective.id}>
             <DetectiveCard index={index + 1} {...detective} />
