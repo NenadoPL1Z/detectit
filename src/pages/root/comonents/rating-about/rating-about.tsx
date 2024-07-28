@@ -1,14 +1,17 @@
 import { Typography } from "@shared/ui";
 import styles from "./rating-about.module.css";
 import { staticInfo } from "@shared/mock/static-info";
+import classnames from "classnames/bind";
+
+const cn = classnames.bind(styles);
 
 export const RatingAbout = () => {
   return (
     <section className={styles.about}>
-      <Typography className={styles.aboutFirst} variant="m500" fontSize={18} lineHeight={30}>
+      <Typography className={cn(styles.typography, styles["typography-first"])} variant="m500">
         {staticInfo.about.firstParagraph}
       </Typography>
-      <Typography variant="m500" fontSize={18} lineHeight={30} wrap>
+      <Typography className={cn(styles.typography)} variant="m500" wrap>
         {staticInfo.about.secondParagraph}
       </Typography>
     </section>

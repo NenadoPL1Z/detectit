@@ -5,6 +5,23 @@
   padding: 0 70px;
 }
 
-.aboutFirst {
+.typography {
+  font-size: 18px;
+  line-height: 30px;
+}
+
+.typography-first {
   margin-bottom: 38px;
+}
+
+@media (max-width: 1024px) {
+  .about {
+    margin: 23px 0 25px;
+    padding: 0 15px;
+  }
+
+  .typography {
+    font-size: 16px;
+    line-height: 25px;
+  }
 }
