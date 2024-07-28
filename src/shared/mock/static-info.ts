@@ -12,6 +12,6 @@ export const staticInfo = {
     displayUser: "+7 921-095-6049",
     call: "+79210956049",
   },
-  vk: "https://vk.com/tproger",
+  vk: "https://vk.com/detectitspb",
   inst: "https://www.instagram.com/",
 };

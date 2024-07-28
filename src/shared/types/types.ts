@@ -10,6 +10,7 @@ export type GameModel = {
 };
 
 export type DetectiveModel = {
+  id: number;
   rank: string;
   points: string;
   image: string;

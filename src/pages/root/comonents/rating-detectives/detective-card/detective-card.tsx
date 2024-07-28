@@ -16,10 +16,10 @@ export const DetectiveCard = ({ index, rank, points, description, image }: Detec
       <Flex>
         <Flex className={styles.points} justify="left" vertical={false} gap={8}>
           <Typography className={styles["points-label"]} variant="m500" fontSize={16} color="black">
-            Количество баллов:
+            Баллы:
           </Typography>
           <Typography className={styles["points-count"]} variant="m400" fontSize={14} color="black">
-            &nbsp;&nbsp;{points ? points : "0"}&nbsp;&nbsp;
+            &nbsp;&nbsp;{points ? points : "Засекречено"}&nbsp;&nbsp;
           </Typography>
         </Flex>
         <Flex className={styles.description} gap={12}>
@@ -27,7 +27,7 @@ export const DetectiveCard = ({ index, rank, points, description, image }: Detec
             ОПИСАНИЕ:
           </Typography>
           <Typography className={styles["description-text"]} variant="m400" fontSize={14} color="black" wrap>
-            {description}
+            {description ? description : "Засекречено"}
           </Typography>
         </Flex>
       </Flex>

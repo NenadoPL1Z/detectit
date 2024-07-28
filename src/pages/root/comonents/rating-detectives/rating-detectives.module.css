@@ -8,3 +8,7 @@
 .title {
   margin-bottom: 50px;
 }
+
+.detectives {
+  overflow: scroll;
+}
