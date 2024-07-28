@@ -26,8 +26,8 @@ export const useRatingGames = () => {
     setPage((page) => page + 1);
   };
 
-  const handleSubmit: FormEventHandler<HTMLFormElement> = (e) => {
-    e.preventDefault();
+  const handleSubmit: FormEventHandler<HTMLFormElement> = (event) => {
+    event.preventDefault();
     setSearch(localSearch);
     setPage(1);
   };

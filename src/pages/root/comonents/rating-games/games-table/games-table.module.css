@@ -1,5 +1,8 @@
 .container {
   border: 10px solid var(--white);
+  background: url("public/assets/images/table-bg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .table {
