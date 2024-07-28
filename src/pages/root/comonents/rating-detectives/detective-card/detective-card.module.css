@@ -3,4 +3,9 @@
   max-width: 520px;
   height: 340px;
   background-color: #cdcfce;
+  padding: 15px 30px;
+}
+
+.top {
+  margin-bottom: 8px;
 }
