@@ -1,14 +1,29 @@
 import { GamesTableProps } from "./types";
-import Spinner from "@shared/assets/icons/spinner.svg?react";
-import { Typography } from "@shared/ui";
 import styles from "./games-table.module.css";
-export const GamesTable = ({ games, loading }: GamesTableProps) => {
+import { TableHeader } from "./components/table-header";
+import { TableBody } from "./components/table-body";
+export const GamesTable = ({ games }: GamesTableProps) => {
   return (
     <section className={styles.container}>
-      <Typography variant="m400" fontSize={18}>
-        {JSON.stringify(games.map((item) => item.team))}
-      </Typography>
-      {loading && <Spinner />}
+      <table className={styles.table}>
+        <thead>
+          <tr>
+            <TableHeader header="Название команды" />
+            <TableHeader header="Кол-во баллов" />
+            <TableHeader header="Звание" />
+            <TableHeader header="Кол-во игр" />
+            <TableHeader header=" " />
+            <TableHeader header="Кол-во 1 мест" />
+            <TableHeader header="Кол-во 2 мест" />
+            <TableHeader header="Кол-во 3 мест" />
+          </tr>
+        </thead>
+        <tbody>
+          {games.map((game) => (
+            <TableBody key={game.team + game.rank + game.total_points} {...game} />
+          ))}
+        </tbody>
+      </table>
     </section>
   );
 };
