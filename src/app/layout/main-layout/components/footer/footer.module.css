@@ -14,9 +14,64 @@
 }
 
 .logo {
+  width: 129px;
+  height: 131px;
   margin-bottom: 44px;
 }
 
-.game {
+.info {
+  gap: 36px;
+}
+
+.icon {
+  width: 53px;
+  height: 53px;
+}
+
+.questions {
+  font-size: 16px;
+  line-height: 18px;
   margin-bottom: 7px;
+}
+
+.phone {
+  font-size: 20px;
+  line-height: 29px;
+}
+
+@media (max-width: 1024px) {
+  .footer {
+    padding: 19px 20px 14px;
+  }
+
+  .wrapper {
+    max-width: 320px;
+    padding-bottom: 8px;
+  }
+
+  .logo {
+    width: 64px;
+    height: 64px;
+    margin-bottom: 20px;
+  }
+
+  .info {
+    gap: 16px;
+  }
+
+  .icon {
+    width: 26px;
+    height: 26px;
+  }
+
+  .questions {
+    font-size: 12px;
+    line-height: 12px;
+    margin-bottom: 10px;
+  }
+
+  .phone {
+    font-size: 16px;
+    line-height: 16px;
+  }
 }
