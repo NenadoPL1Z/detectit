@@ -7,4 +7,5 @@ export type GamesTableProps = {
   isPagination: boolean;
   onLoadMore: () => void;
   onRetry: () => void;
+  onClear: () => void;
 };

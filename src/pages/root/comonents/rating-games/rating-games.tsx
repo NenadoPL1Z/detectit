@@ -14,6 +14,7 @@ export const RatingGames = () => {
     setLocalSearch,
     handleLoadMore,
     handleRetry,
+    handleClear,
     handleSubmit,
   } = useRatingGames();
 
@@ -39,6 +40,7 @@ export const RatingGames = () => {
         isPagination={isPagination}
         onLoadMore={handleLoadMore}
         onRetry={handleRetry}
+        onClear={handleClear}
       />
     </Flex>
   );
