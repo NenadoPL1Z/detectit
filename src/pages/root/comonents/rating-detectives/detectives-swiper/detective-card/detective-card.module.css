@@ -9,11 +9,14 @@
 }
 
 .top {
+  gap: 8px;
   margin-bottom: 40px;
   position: relative;
 }
 
 .number {
+  font-size: 8px;
+  line-height: 35px;
   position: absolute;
   left: 0;
   top: 0;
@@ -22,6 +25,7 @@
 .rank {
   max-width: 254px;
   flex-grow: 1;
+  font-size: 24px;
   padding-bottom: 10px;
   border-bottom: 1px solid var(--black);
   text-align: center;
@@ -29,21 +33,25 @@
 }
 
 .points {
+  gap: 8px;
   max-width: 313px;
   margin-bottom: 30px;
 }
 
 .points-label {
+  font-size: 16px;
   text-transform: uppercase;
 }
 
 .points-count {
-  padding-bottom: 10px;
+  font-size: 14px;
+  padding: 0 5px 10px;
   border-bottom: 1px solid var(--black);
 }
 
 .description {
   max-width: 290px;
+  gap: 12px;
 }
 
 .description-label {
@@ -51,6 +59,7 @@
 }
 
 .description-text {
+  font-size: 14px;
   padding: 8px;
   border: 1px solid var(--black);
 }
@@ -97,5 +106,88 @@
 
 
 @media (max-width: 1024px) {
+  .container {
+    width: 220px;
+    min-width: 220px;
+    height: 330px;
+    padding: 15px;
 
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  .top {
+    gap: 0;
+    margin-bottom: 16px;
+    flex-direction: column-reverse;
+  }
+  .number {
+    position: static;
+    line-height: 10px;
+  }
+
+  .rank {
+    max-width: none;
+    font-size: 20px;
+    padding-bottom: 0;
+  }
+
+  .points {
+    max-width: none;
+    flex-direction: column;
+    margin-bottom: 10px;
+    gap: 2px;
+  }
+
+  .points-label {
+    font-size: 16px;
+    max-width: 72px;
+    border-bottom: 1px solid var(--black);
+  }
+
+  .points-count {
+    padding: 0;
+    border-bottom: 0
+  }
+
+  .description {
+    max-width: none;
+    gap: 2px;
+  }
+
+  .description-label {
+    text-transform: none;
+    max-width: 93px;
+    border-bottom: 1px solid var(--black);
+  }
+
+  .description-text {
+    font-size: 12px;
+    padding: 0;
+    border: 0;
+  }
+
+  .image {
+    width: 83px;
+    height: 100px;
+    position: static;
+    right: auto;
+    top: auto;
+    margin-bottom: 10px;
+  }
+
+  .image-wrapper {
+    transform: none;
+  }
+
+  .image-clip {
+    display: none;
+  }
+
+  .image-rank {
+    width: 73px;
+    height: 90px;
+  }
 }

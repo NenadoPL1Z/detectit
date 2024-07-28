@@ -8,11 +8,10 @@ export const Flex = ({ className, tag = "div", vertical = true, gap, grow, align
   const Tag = tags[tag];
   return (
     <Tag
-      className={cn(styles.container, className)}
+      className={cn(styles.container, { vertical }, className)}
       style={{
         alignItems: align,
         justifyContent: justify,
-        flexDirection: vertical ? "column" : "row",
         flexGrow: grow,
         gap,
       }}>
