@@ -18,7 +18,7 @@ export const useRatingGames = () => {
   const isPagination = gamesDisplayed.length === countDisplayElement;
 
   const isDisplayLoading = Boolean(loading && !error && !games.length);
-  const isDisplayEmpty = Boolean(!games.length && !error && !loading);
+  const isDisplayEmpty = Boolean(!gamesDisplayed.length && !error && !loading);
   const isDisplayError = Boolean(error && !games.length);
   const isDisplayMore = Boolean(games.length && !error && !loading && isPagination);
 
