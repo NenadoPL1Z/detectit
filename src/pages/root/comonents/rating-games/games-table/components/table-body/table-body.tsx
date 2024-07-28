@@ -2,6 +2,7 @@ import { TableBodyProps } from "./types";
 import styles from "./table-body.module.css";
 import classnames from "classnames/bind";
 import { NavigationRoutes } from "@shared/constants";
+import { Link } from "react-router-dom";
 const cn = classnames.bind(styles);
 
 export const TableBody = ({
@@ -19,9 +20,9 @@ export const TableBody = ({
     <tr>
       <th className={cn(styles.body, styles.team, { "align-left": true })}>
         {number + 1}.&nbsp;&nbsp;&nbsp;
-        <a href={`${NavigationRoutes.COMMANDS.path}/${id}`} target="_blank" rel="noreferrer">
+        <Link to={`${NavigationRoutes.COMMANDS.path}/${id}`}>
           <span>{team}</span>
-        </a>
+        </Link>
       </th>
       <th className={cn(styles.body, styles["total-points"])}>{total_points}</th>
       <th className={cn(styles.body, styles["rank"])}>{rank}</th>
