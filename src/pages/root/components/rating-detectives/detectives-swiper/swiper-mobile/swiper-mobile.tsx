@@ -6,7 +6,7 @@ import { DetectiveCard } from "../detective-card";
 export const SwiperMobile = () => {
   return (
     <>
-      <Swiper spaceBetween={30} slidesPerView="auto" loop>
+      <Swiper spaceBetween={30} slidesPerView="auto">
         {detectivesInfo.map((detective, index) => (
           <SwiperSlide className={styles.slide} key={detective.id}>
             <DetectiveCard index={index + 1} {...detective} />
