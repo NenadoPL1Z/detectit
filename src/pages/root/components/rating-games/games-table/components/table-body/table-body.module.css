@@ -1,3 +1,7 @@
+.row {
+  border-top: 1px solid var(--white);
+}
+
 .body {
   font-size: 24px;
   line-height: 30px;
@@ -16,27 +20,15 @@
   text-decoration: underline;
 }
 
-.total-points {
-}
-
-.rank {
-}
-
-.total-games {
-}
-
+.total-points {}
+.rank {}
+.total-games {}
 .empty {
   width: 10%;
 }
-
-.first-places {
-}
-
-.second-places {
-}
-
-.third-places {
-}
+.first-places {}
+.second-places {}
+.third-places {}
 
 .align-left {
   text-align: left;
@@ -44,4 +36,37 @@
 
 .border-off {
   border-right: 0;
+}
+
+
+@media (max-width: 1024px) {
+  .body {
+    font-size: 18px;
+    line-height: 18px;
+    padding: 10px;
+  }
+
+  .rank {
+    display: none;
+  }
+
+  .total-games {
+    display: none;
+  }
+
+  .empty {
+    display: none;
+  }
+
+  .first-places {
+    display: none;
+  }
+
+  .second-places {
+    display: none;
+  }
+
+  .third-places {
+    display: none;
+  }
 }

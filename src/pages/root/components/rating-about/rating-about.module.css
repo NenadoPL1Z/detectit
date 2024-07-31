@@ -14,6 +14,12 @@
   margin-bottom: 38px;
 }
 
+@media (max-width: 1400px) {
+  .container {
+    padding: 0 30px;
+  }
+}
+
 @media (max-width: 1024px) {
   .about {
     margin: 23px 0 40px;

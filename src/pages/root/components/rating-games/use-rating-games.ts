@@ -28,6 +28,7 @@ export const useRatingGames = () => {
 
   const handleSubmit: FormEventHandler<HTMLFormElement> = (event) => {
     event.preventDefault();
+    if (search === localSearch) return;
     setSearch(localSearch);
     setPage(1);
   };

@@ -11,6 +11,7 @@
   margin-bottom: 50px;
 }
 
+
 @media (max-width: 1024px) {
   .container {
     margin: 0 auto 60px;

@@ -10,3 +10,42 @@
 .align-left {
   text-align: left;
 }
+
+@media (max-width: 1400px) {
+  .header {
+    padding: 20px 10px;
+    font-size: 16px;
+  }
+}
+
+
+@media (max-width: 1024px) {
+  .header {
+    padding: 10px;
+    font-size: 16px;
+  }
+
+  .rank {
+    display: none;
+  }
+
+  .total-games {
+    display: none;
+  }
+
+  .empty {
+    display: none;
+  }
+
+  .first-places {
+    display: none;
+  }
+
+  .second-places {
+    display: none;
+  }
+
+  .third-places {
+    display: none;
+  }
+}

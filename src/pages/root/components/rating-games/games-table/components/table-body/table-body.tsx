@@ -17,7 +17,7 @@ export const TableBody = ({
   third_places,
 }: TableBodyProps) => {
   return (
-    <tr>
+    <tr className={cn({ row: number % 10 == 0 && number !== 0 })}>
       <th className={cn(styles.body, styles.team, { "align-left": true })}>
         {number + 1}.&nbsp;&nbsp;&nbsp;
         <Link to={`${NavigationRoutes.COMMANDS.path}/${id}`}>

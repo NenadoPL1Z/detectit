@@ -5,6 +5,10 @@
   padding: 0 70px;
 }
 
+.form {
+  margin-bottom: 40px;
+}
+
 .input {
   flex-grow: 1;
 }
@@ -13,6 +17,27 @@
   flex-grow: 0;
 }
 
-.form {
-  margin-bottom: 40px;
+@media (max-width: 1400px) {
+  .container {
+    padding: 0 30px;
+  }
+}
+
+
+@media (max-width: 1024px) {
+  .container {
+    padding: 0 15px;
+    margin: 0 auto 18px;
+  }
+  .form {
+    margin-bottom: 20px;
+    flex-direction: column;
+  }
+  .input {
+    width: 100%;
+  }
+  .button {
+    width: 100%;
+    min-height: 48px
+  }
 }
