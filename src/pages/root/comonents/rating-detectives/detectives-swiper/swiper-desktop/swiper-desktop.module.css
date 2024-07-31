@@ -1,31 +1,31 @@
 .container {
-    position: relative;
+  position: relative;
 }
 
 .button {
-    width: 46px;
-    height: 46px;
-    background-color: transparent;
-    border-radius: 50%;
-    position: relative;
+  width: 46px;
+  height: 46px;
+  background-color: transparent;
+  border-radius: 50%;
+  position: relative;
 }
 
 .button-prev {
-    position: absolute;
-    left: -58px;
-    top: 50%;
-    z-index: 100;
-    transform: translateY(-50%);
+  position: absolute;
+  left: -58px;
+  top: 50%;
+  z-index: 100;
+  transform: translateY(-50%);
 }
 
 .button-next {
-    position: absolute;
-    right: -58px;
-    top: 50%;
-    z-index: 100;
-    transform: translateY(-50%);
+  position: absolute;
+  right: -58px;
+  top: 50%;
+  z-index: 100;
+  transform: translateY(-50%);
 }
 
 .slide {
-    width: 520px !important;
+  width: 520px !important;
 }
