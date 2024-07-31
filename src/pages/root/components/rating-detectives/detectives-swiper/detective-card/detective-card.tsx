@@ -6,7 +6,7 @@ import clip from "../../../../../../../public/assets/images/clip.png";
 export const DetectiveCard = ({ index, rank, points, description, image }: DetectiveCardProps) => {
   return (
     <div className={styles.container}>
-      <div>
+      <div className={styles.info}>
         <Flex className={styles.top} vertical={false} justify="center" align="center">
           <Typography className={styles.number} variant="m500" color="black">
             Дело No.{index > 9 ? `000${index}` : `0000${index}`}
