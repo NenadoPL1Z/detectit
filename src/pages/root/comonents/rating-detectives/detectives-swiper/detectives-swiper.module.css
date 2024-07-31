@@ -2,40 +2,16 @@
   position: relative;
 }
 
-.button {
-  width: 46px;
-  height: 46px;
-  background-color: transparent;
-  border-radius: 50%;
-  position: relative;
-}
-
-.button-prev {
-  position: absolute;
-  left: -58px;
-  top: 50%;
-  z-index: 100;
-  transform: translateY(-50%);
-}
-
-.button-next {
-  position: absolute;
-  right: -58px;
-  top: 50%;
-  z-index: 100;
-  transform: translateY(-50%);
-}
-
-.slide {
-  width: 520px !important;
+.mobile {
+  display: none;
 }
 
 @media (max-width: 1024px) {
-  .button {
+  .desktop {
     display: none;
   }
 
-  .slide {
-    width: 220px !important;
+  .mobile {
+    display: block;
   }
 }
