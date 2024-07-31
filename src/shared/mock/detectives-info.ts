@@ -1,12 +1,24 @@
 import { DetectiveModel } from "@shared/types";
+import trainee from "../../../public/assets/images/detectives/trainee.png";
+import constable from "../../../public/assets/images/detectives/constable.png";
+import inspector from "../../../public/assets/images/detectives/inspector.png";
+import sheriff from "../../../public/assets/images/detectives/sheriff.png";
+import superintendent from "../../../public/assets/images/detectives/superintendent.png";
+import sherlock from "../../../public/assets/images/detectives/sherlock.png";
+import moriarty from "../../../public/assets/images/detectives/moriarty.png";
+import agentStarling from "../../../public/assets/images/detectives/agent-starling.png";
+import bonyAndClyde from "../../../public/assets/images/detectives/bony-and-clyde.png";
+import leonidKanevsky from "../../../public/assets/images/detectives/leonid-kanevsky.png";
+import jules from "../../../public/assets/images/detectives/jules.png";
+import trueDetective from "../../../public/assets/images/detectives/true-detective.png";
+import godfather from "../../../public/assets/images/detectives/godfather.png";
 
-const BASE_IMG_ULR = "/public/assets/images/detectives";
 export const detectivesInfo: DetectiveModel[] = [
   {
     id: 1,
     rank: "Стажёр",
     points: "",
-    image: `${BASE_IMG_ULR}/trainee.png`,
+    image: trainee,
     description:
       "Ваша команда только начала свой детективный путь.Мы вам завидуем, ведь впереди столько всего интересного!",
   },
@@ -14,7 +26,7 @@ export const detectivesInfo: DetectiveModel[] = [
     id: 2,
     rank: "Констебль",
     points: "",
-    image: `${BASE_IMG_ULR}/constable.png`,
+    image: constable,
     description:
       "Вы начинаете чувствовать себя увереннее на месте преступления, а улики складываются в логическую цепочку!\n",
   },
@@ -22,14 +34,14 @@ export const detectivesInfo: DetectiveModel[] = [
     id: 3,
     rank: "Инспектор",
     points: "",
-    image: `${BASE_IMG_ULR}/inspector.png`,
+    image: inspector,
     description: "Позади уже не одно раскрытое дело. С каждой серией ваша команда оттачивает свое мастерство.",
   },
   {
     id: 4,
     rank: "Шериф",
     points: "",
-    image: `${BASE_IMG_ULR}/sheriff.png`,
+    image: sheriff,
     description:
       "Вам покоряются самые сложные шифры и запутанные серии преступлений. Вы начинаете видеть подсказки к Секрету практически везде. А ваша команда сияет на играх ярко, словно звезда Шерифа.",
   },
@@ -37,7 +49,7 @@ export const detectivesInfo: DetectiveModel[] = [
     id: 5,
     rank: "Суперинтендант",
     points: "",
-    image: `${BASE_IMG_ULR}/superintendent.png`,
+    image: superintendent,
     description:
       "Звание говорит само за себя. Ваша команда — супер! Вас уважаю соперники и громкие аплодисменты сопровождают вас, когда вы идете за новой медалью!",
   },
@@ -45,7 +57,7 @@ export const detectivesInfo: DetectiveModel[] = [
     id: 6,
     rank: "Шерлок",
     points: "",
-    image: `${BASE_IMG_ULR}/sherlock.png`,
+    image: sherlock,
     description:
       "Вы выбрали светлую сторону. Ваш уникальный ум создан для того, раскрывать преступления, а в чертогах разума уже огромное количество информации.",
   },
@@ -53,28 +65,28 @@ export const detectivesInfo: DetectiveModel[] = [
     id: 7,
     rank: "Мориарти",
     points: "",
-    image: `${BASE_IMG_ULR}/moriarty.png`,
+    image: moriarty,
     description: "",
   },
   {
     id: 8,
     rank: "Агент Старлинг",
     points: "",
-    image: `${BASE_IMG_ULR}/agent-starling.png`,
+    image: agentStarling,
     description: "Вам можно доверить дела федерального масштаба. И ягнята вас больше не беспокоят...",
   },
   {
     id: 9,
     rank: "Бонни и Клайд",
     points: "",
-    image: `${BASE_IMG_ULR}/bony-and-clyde.png`,
+    image: bonyAndClyde,
     description: "",
   },
   {
     id: 10,
     rank: "Леонид Каневский",
     points: "",
-    image: `${BASE_IMG_ULR}/leonid-kanevsky.png`,
+    image: leonidKanevsky,
     description:
       "Вы признанные эксперты в криминалистике. Можете раскрыть преступление с одного взгляда на ковер.Впрочем, это уже совсем другая история...",
   },
@@ -82,21 +94,21 @@ export const detectivesInfo: DetectiveModel[] = [
     id: 11,
     rank: "Джулс",
     points: "",
-    image: `${BASE_IMG_ULR}/jules.png`,
+    image: jules,
     description: "",
   },
   {
     id: 12,
     rank: "Настоящий Детектив",
     points: "",
-    image: `${BASE_IMG_ULR}/true-detective.png`,
+    image: trueDetective,
     description: "",
   },
   {
     id: 13,
     rank: "Крестный отец",
     points: "",
-    image: `${BASE_IMG_ULR}/godfather.png`,
+    image: godfather,
     description: "",
   },
 ];

@@ -1,6 +1,7 @@
 import { DetectiveCardProps } from "./types";
 import styles from "./detective-card.module.css";
 import { Flex, Typography } from "@shared/ui";
+import clip from "../../../../../../../public/assets/images/clip.png";
 
 export const DetectiveCard = ({ index, rank, points, description, image }: DetectiveCardProps) => {
   return (
@@ -35,7 +36,7 @@ export const DetectiveCard = ({ index, rank, points, description, image }: Detec
       </div>
       <div className={styles["image"]}>
         <div className={styles["image-wrapper"]}>
-          <img className={styles["image-clip"]} src="/public/assets/images/clip.png" alt="скрепка" />
+          <img className={styles["image-clip"]} src={clip} alt="скрепка" />
           <img className={styles["image-rank"]} src={image} alt={rank} />
         </div>
       </div>
