@@ -18,7 +18,7 @@ export const TableFooter = ({
 
   return (
     <Flex className={cn(styles["table-bottom"], { "bottom-off": bottomOff })} align="center" justify="center">
-      {isDisplayLoading && <Spinner />}
+      {isDisplayLoading && <Spinner className={styles.spinner} />}
       {isDisplayMore && (
         <Button className={styles.button} onClick={onLoadMore}>
           ПОКАЗАТЬ ЕЩЕ
@@ -26,7 +26,7 @@ export const TableFooter = ({
       )}
       {isDisplayEmpty && (
         <>
-          <Typography variant="m700" fontSize={24} wrap centered className={styles.error}>
+          <Typography variant="m700" wrap centered className={styles.error}>
             Пусто!{"\n"}
           </Typography>
           <Button className={styles.button} onClick={onClear}>
@@ -36,8 +36,8 @@ export const TableFooter = ({
       )}
       {isDisplayError && (
         <>
-          <Typography variant="m700" fontSize={24} wrap centered className={styles.error}>
-            Что-то пошло не так.{"\n"} Попробуйте позже или повторите попытку
+          <Typography variant="m700" wrap centered className={styles.error}>
+            Что-то пошло не так.{"\n"}Попробуйте позже или повторите попытку
           </Typography>
           <Button className={styles.button} onClick={onRetry}>
             ПОПРОБОВАТЬ ЕЩЕ РАЗ
