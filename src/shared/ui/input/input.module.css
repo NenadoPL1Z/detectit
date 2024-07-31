@@ -1,4 +1,9 @@
+.container {
+  position: relative;
+}
+
 .input {
+  width: 100%;
   padding: 16px 20px;
 
   background-color: var(--white);
@@ -16,8 +21,51 @@
   font-weight: 400;
 }
 
+.value {
+  padding-right: 55px;
+}
+
+.button {
+  width: 45px;
+  height: 100%;
+
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 1;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.clear {
+  width: 20px;
+  height: 20px;
+}
+
+
 @media (max-width: 1024px) {
   .input {
-    padding: 14px 20px;
+    padding: 12px 10px;
+    font-size: 16px;
+    outline: none;
+  }
+
+  .input::placeholder {
+    font-size: 16px;
+  }
+
+  .value {
+    padding-right: 40px;
+  }
+
+  .button {
+    width: 30px;
+  }
+
+  .clear {
+    width: 16px;
+    height: 16px;
   }
 }

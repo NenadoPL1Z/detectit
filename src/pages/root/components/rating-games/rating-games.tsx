@@ -25,6 +25,7 @@ export const RatingGames = () => {
             placeholder="Название команды"
             value={localSearch}
             onChange={(e) => setLocalSearch(e.target.value)}
+            onClear={() => setLocalSearch("")}
           />
           <Button className={styles.button} type="submit">
             ПОСМОТРЕТЬ СТАТИСТИКУ
