@@ -23,7 +23,6 @@
   }
 }
 
-
 @media (max-width: 1024px) {
   .container {
     padding: 0 15px;
@@ -38,6 +37,6 @@
   }
   .button {
     width: 100%;
-    min-height: 48px
+    min-height: 48px;
   }
 }
