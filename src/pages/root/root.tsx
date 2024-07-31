@@ -1,6 +1,6 @@
-import { RatingDetectives } from "./comonents/rating-detectives";
+import { RatingDetectives } from "./components/rating-detectives";
 // import { RatingGames } from "./components/rating-games";
-import { RatingAbout } from "./comonents/rating-about";
+import { RatingAbout } from "./components/rating-about";
 
 export const RootPage = () => {
   return (
