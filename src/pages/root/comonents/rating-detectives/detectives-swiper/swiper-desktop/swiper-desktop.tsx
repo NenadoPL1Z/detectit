@@ -12,9 +12,6 @@ const cn = classnames.bind(styles);
 
 export const SwiperDesktop = () => {
   const [swiper, setSwiper] = useState<SW>();
-  const [activeIndex, setActiveIndex] = useState(swiper?.activeIndex ?? 0);
-  const isPrev = activeIndex !== 0;
-  const isNext = activeIndex !== detectivesInfo.length;
 
   const handlePressArrow = (slide: "prev" | "next") => {
     return () => {
@@ -23,31 +20,24 @@ export const SwiperDesktop = () => {
       } else {
         swiper?.slideNext();
       }
-      if (swiper) {
-        setActiveIndex(swiper.activeIndex);
-      }
     };
   };
 
   return (
     <>
-      {isPrev && (
-        <button className={cn(styles.button, styles["button-prev"])} onClick={handlePressArrow("prev")}>
-          <SwiperPrevButton />
-        </button>
-      )}
-      <Swiper spaceBetween={110} allowTouchMove={false} slidesPerView="auto" onSwiper={setSwiper}>
+      <button className={cn(styles.button, styles["button-prev"])} onClick={handlePressArrow("prev")}>
+        <SwiperPrevButton />
+      </button>
+      <Swiper spaceBetween={110} slidesPerView="auto" loop onSwiper={setSwiper}>
         {detectivesInfo.map((detective, index) => (
           <SwiperSlide className={styles.slide} key={detective.id}>
             <DetectiveCard index={index + 1} {...detective} />
           </SwiperSlide>
         ))}
       </Swiper>
-      {isNext && (
-        <button className={cn(styles.button, styles["button-next"])} onClick={handlePressArrow("next")}>
-          <SwiperNextButton />
-        </button>
-      )}
+      <button className={cn(styles.button, styles["button-next"])} onClick={handlePressArrow("next")}>
+        <SwiperNextButton />
+      </button>
     </>
   );
 };
