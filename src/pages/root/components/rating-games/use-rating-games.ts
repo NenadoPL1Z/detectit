@@ -4,7 +4,6 @@ import { isAxiosError } from "axios";
 import { RATING_GAMES_ERROR_MESSAGE, RATING_GAMES_LIMIT } from "./constants";
 import { filterSearch } from "./helpers";
 import { useRatingStore } from "@entities/store/rating";
-
 export const useRatingGames = () => {
   const { search, games, loading, error, page, setSearch, incrementPage, resetPage, setStore } = useRatingStore();
   const [localSearch, setLocalSearch] = useState(search);

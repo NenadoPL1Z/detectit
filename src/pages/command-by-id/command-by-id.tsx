@@ -3,8 +3,12 @@ import styles from "./command-by-id.module.css";
 import CaseImg from "../../../public/assets/images/case.png";
 import { CommandContent } from "@pages/command-by-id/components/command-content/command-content";
 import { Link } from "react-router-dom";
+import { useEffect } from "react";
 
 export const CommandByIdPage = () => {
+  useEffect(() => {
+    window.scrollTo({ top: 0 });
+  }, []);
   return (
     <Flex tag="section" className={styles.container} align="center" grow={1}>
       <Typography variant="b700" className={styles.title}>
