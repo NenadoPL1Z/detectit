@@ -1,41 +1,40 @@
 .container {
-    width: 100%;
-    max-width: 1920px;
-    margin: 38px auto 50px;
+  width: 100%;
+  max-width: 1920px;
+  margin: 38px auto 50px;
 }
 
 .title {
-    font-size: 64px;
-    line-height: 64px;
-    margin-bottom: 6px;
+  font-size: 64px;
+  line-height: 64px;
+  margin-bottom: 6px;
 }
 
 .subtitle {
-    font-size: 48px;
+  font-size: 48px;
 }
 
 .content {
-    width: 100%;
-    max-width: 920px;
-    min-height: 810px;
-    flex-grow: 1;
-    margin: 60px auto 80px;
+  width: 100%;
+  max-width: 920px;
+  min-height: 810px;
+  flex-grow: 1;
+  margin: 60px auto 80px;
 }
 
 .left {
-    flex-grow: 1;
-    max-width: 350px;
-    background-color: red;
+  flex-grow: 1;
+  max-width: 350px;
+  background-color: red;
 }
 
 .case {
-    object-fit: cover;
-    height: 100%;
+  object-fit: cover;
+  height: 100%;
 }
 
 .right {
-    flex-grow: 1;
-    max-width: 568px;
-    background-color: #DDD6CB;
+  flex-grow: 1;
+  max-width: 568px;
+  background-color: #ddd6cb;
 }
-
