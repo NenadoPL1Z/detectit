@@ -45,10 +45,15 @@
 }
 
 @media (max-width: 1024px) {
+  .row {
+    border-top: 1px solid rgba(255, 255, 255, 0.4);
+  }
+
   .body {
     font-size: 18px;
     line-height: 18px;
     padding: 10px;
+    border-right: 1px solid rgba(255, 255, 255, 0.4);
   }
 
   .rank {
