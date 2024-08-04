@@ -4,13 +4,14 @@ import { detectivesInfo } from "@shared/mock/detectives-info";
 import { DetectiveCard } from "../detective-card";
 import { Flex, Typography } from "@shared/ui";
 import { motion } from "framer-motion";
+import { useState } from "react";
 
 export const SwiperMobile = () => {
-  const activeIndex = 0;
+  const [activeIndex, setActiveIndex] = useState(0);
 
   return (
     <>
-      <Swiper spaceBetween={30} slidesPerView="auto">
+      <Swiper spaceBetween={30} slidesPerView="auto" onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex)}>
         {detectivesInfo.map((detective, index) => (
           <SwiperSlide className={styles.slide} key={detective.id}>
             <DetectiveCard index={index + 1} {...detective} />
