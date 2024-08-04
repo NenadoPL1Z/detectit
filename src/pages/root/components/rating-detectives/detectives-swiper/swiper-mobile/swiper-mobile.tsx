@@ -7,11 +7,17 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 
 export const SwiperMobile = () => {
+  const [prevViews, setPrevViews] = useState(0);
   const [activeIndex, setActiveIndex] = useState(0);
 
   return (
     <>
-      <Swiper spaceBetween={30} slidesPerView="auto" onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex)}>
+      <Swiper
+        spaceBetween={30}
+        slidesPerView="auto"
+        resizeObserver
+        onBeforeResize={(swiper) => setPrevViews(Math.floor(swiper.width / 220))}
+        onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex)}>
         {detectivesInfo.map((detective, index) => (
           <SwiperSlide className={styles.slide} key={detective.id}>
             <DetectiveCard index={index + 1} {...detective} />
@@ -24,7 +30,7 @@ export const SwiperMobile = () => {
         </Typography>
         <div className={styles.range}>
           <motion.div
-            animate={{ width: `${activeIndex * (100 / detectivesInfo.length)}%` }}
+            animate={{ width: `calc(${activeIndex * (100 / (detectivesInfo.length - prevViews))}% - 12px)` }}
             className={styles["active-line"]}>
             <div className={styles.dot} />
           </motion.div>
