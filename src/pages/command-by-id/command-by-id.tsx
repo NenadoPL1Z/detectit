@@ -2,6 +2,7 @@ import { Button, Flex, Typography } from "@shared/ui";
 import styles from "./command-by-id.module.css";
 import CaseImg from "../../../public/assets/images/case.png";
 import { CommandContent } from "@pages/command-by-id/components/command-content/command-content";
+import { Link } from "react-router-dom";
 
 export const CommandByIdPage = () => {
   return (
@@ -20,7 +21,9 @@ export const CommandByIdPage = () => {
           <CommandContent />
         </div>
       </Flex>
-      <Button>ВЕРНУТЬСЯ ОБРАТНО</Button>
+      <Button>
+        <Link to={"/"}>ВЕРНУТЬСЯ ОБРАТНО</Link>
+      </Button>
     </Flex>
   );
 };

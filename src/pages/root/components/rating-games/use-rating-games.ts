@@ -1,17 +1,13 @@
 import { FormEventHandler, useEffect, useState } from "react";
-import { GameModel } from "@shared/types";
 import { apiGetAllRatings } from "@entities/api";
 import { isAxiosError } from "axios";
 import { RATING_GAMES_ERROR_MESSAGE, RATING_GAMES_LIMIT } from "./constants";
 import { filterSearch } from "./helpers";
+import { useRatingStore } from "@entities/store/rating";
 
 export const useRatingGames = () => {
-  const [search, setSearch] = useState("");
-  const [localSearch, setLocalSearch] = useState("");
-  const [games, setGames] = useState<GameModel[]>([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState("");
-  const [page, setPage] = useState(1);
+  const { search, games, loading, error, page, setSearch, incrementPage, resetPage, setStore } = useRatingStore();
+  const [localSearch, setLocalSearch] = useState(search);
 
   const countDisplayElement = page * RATING_GAMES_LIMIT;
   const gamesDisplayed = games.filter(filterSearch(search)).slice(0, page * RATING_GAMES_LIMIT);
@@ -23,31 +19,35 @@ export const useRatingGames = () => {
   const isDisplayMore = Boolean(games.length && !error && !loading && isPagination);
 
   const handleLoadMore = () => {
-    setPage((page) => page + 1);
+    incrementPage();
   };
 
   const handleSubmit: FormEventHandler<HTMLFormElement> = (event) => {
     event.preventDefault();
     if (search === localSearch) return;
     setSearch(localSearch);
-    setPage(1);
+    resetPage();
   };
 
   const getGames = async () => {
-    setLoading(true);
-    setError("");
+    setStore({
+      loading: true,
+      error: "",
+    });
     await apiGetAllRatings()
       .then((response) => {
-        setGames(response.data);
-        setLoading(false);
+        setStore({
+          games: response.data,
+          loading: false,
+        });
       })
       .catch((error) => {
-        if (isAxiosError(error)) {
-          setError(error.response?.data ?? RATING_GAMES_ERROR_MESSAGE);
-        } else {
-          setError(RATING_GAMES_ERROR_MESSAGE);
-        }
-        setLoading(false);
+        let result = RATING_GAMES_ERROR_MESSAGE;
+        if (isAxiosError(error) && error.response?.data) result = error.response.data;
+        setStore({
+          error: result,
+          loading: false,
+        });
       });
   };
 
@@ -61,7 +61,7 @@ export const useRatingGames = () => {
   };
 
   useEffect(() => {
-    getGames();
+    if (!games.length) getGames();
   }, []);
 
   return {

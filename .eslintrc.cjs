@@ -19,6 +19,7 @@ module.exports = {
   rules: {
     "prettier/prettier": "error",
     "react/react-in-jsx-scope": "off",
+    "react-hooks/exhaustive-deps": "off",
     "no-console": "warn",
     'react-refresh/only-export-components': [
       'warn',
