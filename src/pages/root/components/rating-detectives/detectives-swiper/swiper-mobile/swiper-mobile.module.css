@@ -5,3 +5,38 @@
 .pagination {
   margin: 20px 50px 0;
 }
+
+.range {
+  width: 100%;
+  position: relative;
+}
+
+.active-line {
+  height: 1px;
+  background-color: var(--white);
+
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.line {
+  width: 100%;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.4);
+
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--white);
+
+  position: absolute;
+  top: -5px;
+  right: -10px;
+}
