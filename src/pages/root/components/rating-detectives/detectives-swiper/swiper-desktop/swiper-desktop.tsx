@@ -28,7 +28,7 @@ export const SwiperDesktop = () => {
       <button className={cn(styles.button, styles["button-prev"])} onClick={handlePressArrow("prev")}>
         <SwiperPrevButton />
       </button>
-      <Swiper spaceBetween={110} slidesPerView="auto" loop onSwiper={setSwiper}>
+      <Swiper spaceBetween={110} slidesPerView="auto" onSwiper={setSwiper}>
         {detectivesInfo.map((detective, index) => (
           <SwiperSlide className={styles.slide} key={detective.id}>
             <DetectiveCard index={index + 1} {...detective} />
