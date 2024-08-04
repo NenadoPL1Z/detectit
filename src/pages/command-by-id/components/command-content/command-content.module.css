@@ -1,0 +1,14 @@
+.container {
+    position: relative;
+}
+
+.photo {
+    position: absolute;
+    right: 0;
+    top: -12px;
+}
+
+.clip {
+    width: 100px;
+    height: 100px;
+}
