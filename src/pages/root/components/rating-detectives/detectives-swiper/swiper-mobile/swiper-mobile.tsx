@@ -9,6 +9,8 @@ import { useState } from "react";
 export const SwiperMobile = () => {
   const [prevViews, setPrevViews] = useState(0);
   const [activeIndex, setActiveIndex] = useState(0);
+  const width = activeIndex * (100 / (detectivesInfo.length - prevViews));
+  const widthStyle = width > 90 ? 100 : width;
 
   return (
     <>
@@ -16,8 +18,12 @@ export const SwiperMobile = () => {
         spaceBetween={30}
         slidesPerView="auto"
         resizeObserver
-        onBeforeResize={(swiper) => setPrevViews(Math.floor(swiper.width / 220))}
-        onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex)}>
+        onSlideChange={(swiper) => {
+          const transform = swiper?.wrapperEl.style.transform;
+          const xTranslate = parseInt(transform.replace(/translate3d\((-?\d+)px, 0px, 0px\)/, "$1"), 10);
+          setPrevViews(swiper.width / 250);
+          setActiveIndex(Math.abs(xTranslate / 250));
+        }}>
         {detectivesInfo.map((detective, index) => (
           <SwiperSlide className={styles.slide} key={detective.id}>
             <DetectiveCard index={index + 1} {...detective} />
@@ -29,9 +35,7 @@ export const SwiperMobile = () => {
           1
         </Typography>
         <div className={styles.range}>
-          <motion.div
-            animate={{ width: `calc(${activeIndex * (100 / (detectivesInfo.length - prevViews))}% - 12px)` }}
-            className={styles["active-line"]}>
+          <motion.div animate={{ width: `calc(${widthStyle}% - 10px)` }} className={styles["active-line"]}>
             <div className={styles.dot} />
           </motion.div>
           <div className={styles.line} />
