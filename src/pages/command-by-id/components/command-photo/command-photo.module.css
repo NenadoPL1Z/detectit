@@ -1,33 +1,33 @@
 .container {
-    position: relative;
+  position: relative;
 }
 
 .clip {
-    width: 50px;
-    height: 50px;
+  width: 50px;
+  height: 50px;
 
-    position: absolute;
-    right: 0;
-    top: 0;
-    z-index: 2;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 2;
 }
 
 .rank-wrapper {
+  width: 240px;
+  height: 295px;
+  border: 10px solid var(--white);
+  background-color: var(--white);
 
-    width: 240px;
-    height: 295px;
-    border: 10px solid var(--white);
+  position: absolute;
+  right: 25px;
+  top: 14px;
+  z-index: 1;
 
-    position: absolute;
-    right: 25px;
-    top: 14px;
-    z-index: 1;
-
-    transform: rotate(5deg);
+  transform: rotate(5deg);
 }
 
 .rank-image {
-    width: 220px;
-    height: 275px;
-    object-fit: cover;
+  width: 220px;
+  height: 275px;
+  object-fit: cover;
 }

@@ -1,0 +1,24 @@
+.container {
+    padding: 15px 30px
+}
+
+.logo {
+    gap: 15px;
+}
+
+
+.report {
+    font-size: 24px;
+    line-height: 31px;
+    margin-bottom: 5px;
+}
+
+.case {
+    font-size: 24px;
+    line-height: 31px;
+}
+
+.row {
+    max-width: 450px;
+    gap: 20px;
+}
