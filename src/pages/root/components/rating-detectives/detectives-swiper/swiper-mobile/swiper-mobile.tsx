@@ -5,6 +5,9 @@ import { DetectiveCard } from "../detective-card";
 import { Flex, Typography } from "@shared/ui";
 import { motion } from "framer-motion";
 import { useState } from "react";
+import classnames from "classnames/bind";
+
+const cn = classnames.bind(styles);
 
 export const SwiperMobile = () => {
   const [prevViews, setPrevViews] = useState(0);
@@ -15,17 +18,15 @@ export const SwiperMobile = () => {
   return (
     <>
       <Swiper
+        cssMode
         spaceBetween={30}
         slidesPerView="auto"
-        resizeObserver
         onSlideChange={(swiper) => {
-          const transform = swiper?.wrapperEl.style.transform;
-          const xTranslate = parseInt(transform.replace(/translate3d\((-?\d+)px, 0px, 0px\)/, "$1"), 10);
           setPrevViews(swiper.width / 250);
-          setActiveIndex(Math.abs(xTranslate / 250));
+          setActiveIndex(swiper.activeIndex);
         }}>
         {detectivesInfo.map((detective, index) => (
-          <SwiperSlide className={styles.slide} key={detective.id}>
+          <SwiperSlide className={cn(styles.slide, { last: index + 1 === detectivesInfo.length })} key={detective.id}>
             <DetectiveCard index={index + 1} {...detective} />
           </SwiperSlide>
         ))}
