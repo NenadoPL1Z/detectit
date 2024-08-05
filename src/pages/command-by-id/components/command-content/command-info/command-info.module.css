@@ -1,16 +1,16 @@
 .container {
-    margin-top: 30px;
+  margin-top: 30px;
 }
 
 .title {
-    display: inline-block;
-    font-size: 24px;
-    padding-bottom: 1px;
-    border-bottom: 1px solid var(--black);
+  display: inline-block;
+  font-size: 24px;
+  padding-bottom: 1px;
+  border-bottom: 1px solid var(--black);
 }
 
 .value {
-    padding-top: 5px;
-    font-size: 24px;
-    text-transform: uppercase;
+  padding-top: 5px;
+  font-size: 24px;
+  text-transform: uppercase;
 }
