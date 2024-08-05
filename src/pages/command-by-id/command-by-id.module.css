@@ -40,3 +40,17 @@
   max-width: 568px;
   background-color: #ddd6cb;
 }
+
+.state {
+  height: 100%;
+}
+
+.spinner {
+  width: 80px;
+  height: 80px;
+}
+
+.error {
+  font-size: 28px;
+  margin-bottom: 15px;
+}
