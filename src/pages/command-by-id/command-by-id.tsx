@@ -2,16 +2,18 @@ import { Button, Flex, Typography } from "@shared/ui";
 import styles from "./command-by-id.module.css";
 import CaseImg from "../../../public/assets/images/case.png";
 import { CommandContent } from "./components/command-content";
-import { Link, useLocation } from "react-router-dom";
+import { CommandPhoto } from "./components/command-photo";
+import { useLocation, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { NavigationRoutes } from "@shared/constants";
 import { GameModel } from "@shared/types";
+import { NavigationRoutes } from "@shared/constants";
 
 export const CommandByIdPage = () => {
   const { state } = useLocation();
   // const [isLoading, setIsLoading] = useState<boolean>(!state);
   // const [error, setError] = useState("");
   const [game] = useState<GameModel>(state);
+  const navigate = useNavigate();
 
   useEffect(() => {
     window.scrollTo({ top: 0 });
@@ -30,12 +32,13 @@ export const CommandByIdPage = () => {
           <img className={styles.case} src={CaseImg} alt="deal" />
         </div>
         <div className={styles.right}>
-          <CommandContent />
+          <>
+            <CommandPhoto total_points={game.total_points} />
+            <CommandContent {...game} />
+          </>
         </div>
       </Flex>
-      <Button>
-        <Link to={NavigationRoutes.ROOT}>Вернуться обратно</Link>
-      </Button>
+      <Button onClick={() => navigate(NavigationRoutes.ROOT)}>Вернуться обратно</Button>
     </Flex>
   );
 };
