@@ -37,7 +37,7 @@ export const TableFooter = ({
       {isDisplayError && (
         <>
           <Typography variant="m700" wrap centered className={styles.error}>
-            Что-то пошло не так.{"\n"}Попробуйте позже или повторите попытку
+            Что-то пошло не так.
           </Typography>
           <Button className={styles.button} onClick={onRetry}>
             ПОПРОБОВАТЬ ЕЩЕ РАЗ

@@ -1,21 +1,29 @@
 import { Button, Flex, Typography } from "@shared/ui";
 import styles from "./command-by-id.module.css";
 import CaseImg from "../../../public/assets/images/case.png";
-import { CommandContent } from "@pages/command-by-id/components/command-content/command-content";
-import { Link } from "react-router-dom";
-import { useEffect } from "react";
+import { CommandContent } from "./components/command-content";
+import { Link, useLocation } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { NavigationRoutes } from "@shared/constants";
+import { GameModel } from "@shared/types";
 
 export const CommandByIdPage = () => {
+  const { state } = useLocation();
+  // const [isLoading, setIsLoading] = useState<boolean>(!state);
+  // const [error, setError] = useState("");
+  const [game] = useState<GameModel>(state);
+
   useEffect(() => {
     window.scrollTo({ top: 0 });
   }, []);
+
   return (
     <Flex tag="section" className={styles.container} align="center" grow={1}>
       <Typography variant="b700" className={styles.title}>
         статистика команды
       </Typography>
       <Typography variant="m500" className={styles.subtitle}>
-        Шерлок Холмс и Ватсон
+        {game?.team}
       </Typography>
       <Flex className={styles.content} vertical={false}>
         <div className={styles.left}>
@@ -26,7 +34,7 @@ export const CommandByIdPage = () => {
         </div>
       </Flex>
       <Button>
-        <Link to={"/"}>ВЕРНУТЬСЯ ОБРАТНО</Link>
+        <Link to={NavigationRoutes.ROOT}>Вернуться обратно</Link>
       </Button>
     </Flex>
   );
