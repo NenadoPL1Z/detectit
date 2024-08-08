@@ -21,11 +21,16 @@ export const useRatingGames = () => {
     incrementPage();
   };
 
+  const handleStoreSearch = (search: string) => {
+    setSearch(search);
+    setLocalSearch(search);
+    resetPage();
+  };
+
   const handleSubmit: FormEventHandler<HTMLFormElement> = (event) => {
     event.preventDefault();
     if (search === localSearch) return;
-    setSearch(localSearch);
-    resetPage();
+    handleStoreSearch(localSearch);
   };
 
   const getGames = async () => {
@@ -75,5 +80,6 @@ export const useRatingGames = () => {
     handleLoadMore,
     handleRetry,
     handleClear,
+    handleStoreSearch,
   };
 };

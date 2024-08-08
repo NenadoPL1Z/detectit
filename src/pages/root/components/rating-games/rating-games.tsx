@@ -13,6 +13,7 @@ export const RatingGames = () => {
     handleRetry,
     handleClear,
     handleSubmit,
+    handleStoreSearch,
     ...displays
   } = useRatingGames();
 
@@ -25,7 +26,7 @@ export const RatingGames = () => {
             placeholder="Название команды"
             value={localSearch}
             onChange={(e) => setLocalSearch(e.target.value)}
-            onClear={() => setLocalSearch("")}
+            onClear={() => handleStoreSearch("")}
           />
           <Button className={styles.button} type="submit">
             ПОСМОТРЕТЬ СТАТИСТИКУ

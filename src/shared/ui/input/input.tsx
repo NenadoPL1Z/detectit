@@ -10,7 +10,7 @@ export const Input = ({ className, onClear, ...props }: InputProps) => {
     <div className={cn(styles.container, className)}>
       <input className={cn(styles.input, { value })} {...props} />
       {value && (
-        <button className={styles.button} onClick={() => onClear()}>
+        <button type="button" className={styles.button} onClick={() => onClear()}>
           <Clear className={styles.clear} />
         </button>
       )}

@@ -1,5 +1,4 @@
 export type GameModel = {
-  id: number;
   team: string;
   total_points: number;
   total_games: number;
