@@ -34,7 +34,7 @@ export const detectivesInfo = {
     rank: "Инспектор",
     points: 750,
     image: inspector,
-    description: "Позади уже не одно раскрытое дело. С каждой серией ваша команда оттачивает свое мастерство. \n",
+    description: "Позади уже не одно раскрытое дело. С каждой серией ваша команда оттачивает свое мастерство.",
   },
   sheriff: {
     id: 4,
@@ -65,7 +65,8 @@ export const detectivesInfo = {
     rank: "Мориарти",
     points: 4000,
     image: moriarty,
-    description: "",
+    description:
+      "Кто, как ни вы, разбирается в криминальном мире. В ваших руках целая сеть знаний, позволяющая раз за разом занимать призовые места.",
   },
   agentStarling: {
     id: 8,
@@ -79,7 +80,7 @@ export const detectivesInfo = {
     rank: "Бонни и Клайд",
     points: 5000,
     image: bonyAndClyde,
-    description: "",
+    description: "Погони, перестрелки... Романтика...",
   },
   leonidKanevsky: {
     id: 10,
@@ -94,21 +95,21 @@ export const detectivesInfo = {
     rank: "Джулс",
     points: 6000,
     image: jules,
-    description: "",
+    description: "Но я стараюсь. Я стараюсь изо всех сил быть пастырем...",
   },
   trueDetective: {
     id: 12,
     rank: "Настоящий Детектив",
     points: 7500,
     image: trueDetective,
-    description: "",
+    description: "True Detective - и этим все сказано! Название вашей команды - синоним успешного расследования.",
   },
   godfather: {
     id: 13,
     rank: "Крестный отец",
     points: 7500,
     image: godfather,
-    description: "",
+    description: "Ты просишь раскрыть дело, но просишь без уважения? Признанные мастера Detectit!",
   },
 };
 
