@@ -1,6 +1,6 @@
 import styles from "./swiper-mobile.module.css";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { detectivesInfo } from "@shared/mock/detectives-info";
+import { detectivesInfoArr } from "@shared/mock/detectives-info";
 import { DetectiveCard } from "../detective-card";
 import { Flex, Typography } from "@shared/ui";
 import { motion } from "framer-motion";
@@ -12,7 +12,7 @@ const cn = classnames.bind(styles);
 export const SwiperMobile = () => {
   const [prevViews, setPrevViews] = useState(0);
   const [activeIndex, setActiveIndex] = useState(0);
-  const width = activeIndex * (100 / (detectivesInfo.length - prevViews));
+  const width = activeIndex * (100 / (detectivesInfoArr.length - prevViews));
   const widthStyle = width > 90 ? 100 : width;
 
   return (
@@ -25,8 +25,10 @@ export const SwiperMobile = () => {
           setPrevViews(swiper.width / 250);
           setActiveIndex(swiper.activeIndex);
         }}>
-        {detectivesInfo.map((detective, index) => (
-          <SwiperSlide className={cn(styles.slide, { last: index + 1 === detectivesInfo.length })} key={detective.id}>
+        {detectivesInfoArr.map((detective, index) => (
+          <SwiperSlide
+            className={cn(styles.slide, { last: index + 1 === detectivesInfoArr.length })}
+            key={detective.id}>
             <DetectiveCard index={index + 1} {...detective} />
           </SwiperSlide>
         ))}
@@ -42,7 +44,7 @@ export const SwiperMobile = () => {
           <div className={styles.line} />
         </div>
         <Typography variant="m700" fontSize={24} lineHeight={24}>
-          {detectivesInfo.length}
+          {detectivesInfoArr.length}
         </Typography>
       </Flex>
     </>

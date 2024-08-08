@@ -1,6 +1,6 @@
 import SwiperPrevButton from "@shared/assets/icons/swiper-prev-button.svg?react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { detectivesInfo } from "@shared/mock/detectives-info";
+import { detectivesInfoArr } from "@shared/mock/detectives-info";
 import { DetectiveCard } from "../detective-card";
 import SwiperNextButton from "@shared/assets/icons/swiper-next-button.svg?react";
 import { useState } from "react";
@@ -29,7 +29,7 @@ export const SwiperDesktop = () => {
         <SwiperPrevButton />
       </button>
       <Swiper spaceBetween={110} allowTouchMove={false} slidesPerView="auto" onSwiper={setSwiper}>
-        {detectivesInfo.map((detective, index) => (
+        {detectivesInfoArr.map((detective, index) => (
           <SwiperSlide className={styles.slide} key={detective.id}>
             <DetectiveCard index={index + 1} {...detective} />
           </SwiperSlide>
