@@ -3,27 +3,42 @@ import styles from "./command-by-id.module.css";
 import CaseImg from "../../../public/assets/images/case.png";
 import { CommandContent } from "./components/command-content";
 import { CommandPhoto } from "./components/command-photo";
-import { useLocation, useNavigate } from "react-router-dom";
+import { useLocation, useNavigate, useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { GameModel } from "@shared/types";
 import { NavigationRoutes } from "@shared/constants";
 import Spinner from "@shared/assets/icons/spinner.svg?react";
+import { apiGetTeamInfo } from "@entities/api";
 
 export const CommandByIdPage = () => {
+  const { id } = useParams();
   const { state } = useLocation();
   const navigate = useNavigate();
 
-  const [game] = useState<GameModel>(state);
-  const [isLoading] = useState<boolean>(!state);
-  const [error] = useState("");
+  const [game, setGame] = useState<GameModel>(state);
+  const [isLoading, setIsLoading] = useState<boolean>(!state);
+  const [error, setError] = useState("");
   const isState = isLoading || error;
 
-  const handleRetry = () => {
-    //
+  const getTeamInfo = async () => {
+    setIsLoading(true);
+    setError("");
+
+    apiGetTeamInfo(id ?? "")
+      .then((response) => {
+        setGame(response.data);
+        setIsLoading(false);
+        setError("");
+      })
+      .catch(() => {
+        setIsLoading(false);
+        setError("Что-то пошло не так");
+      });
   };
 
   useEffect(() => {
     window.scrollTo({ top: 0 });
+    if (!state) getTeamInfo();
   }, []);
 
   return (
@@ -47,7 +62,7 @@ export const CommandByIdPage = () => {
                   <Typography variant="m500" color="black" className={styles.error}>
                     Что-то пошло не так
                   </Typography>
-                  <Button onClick={handleRetry}>ПОПРОБОВАТЬ ЕЩЕ РАЗ</Button>
+                  <Button onClick={getTeamInfo}>ПОПРОБОВАТЬ ЕЩЕ РАЗ</Button>
                 </Flex>
               )}
             </Flex>
