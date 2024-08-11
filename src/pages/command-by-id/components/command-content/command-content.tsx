@@ -13,8 +13,8 @@ export const CommandContent = ({
 }: GameModel) => {
   return (
     <div className={styles.container}>
-      <Flex vertical={false} align="center" className={styles.logo}>
-        <LogoDark />
+      <Flex vertical={false} align="center" className={styles["logo-container"]}>
+        <LogoDark className={styles.logo} />
         <div>
           <Typography variant="m700" color="black" className={styles.report}>
             Отчет детектива
