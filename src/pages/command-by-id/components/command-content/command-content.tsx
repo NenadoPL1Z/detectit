@@ -25,13 +25,13 @@ export const CommandContent = ({
         </div>
       </Flex>
       <CommandInfo title="Звание:" value={rank} />
-      <CommandInfo title="Кол-во баллов:" value={total_points} />
-      <CommandInfo title="Кол-во игр:" value={total_games} />
+      <CommandInfo title="Кол-во баллов:" value={total_points ?? 0} />
+      <CommandInfo title="Кол-во игр:" value={total_games ?? 0} />
       <Flex vertical={false} justify="space-between" className={styles.row}>
-        <CommandInfo title="Кол-во 1 мест:" value={first_places} />
-        <CommandInfo title="Кол-во 2 мест:" value={second_places} />
+        <CommandInfo title="Кол-во 1 мест:" value={first_places ?? 0} />
+        <CommandInfo title="Кол-во 2 мест:" value={second_places ?? 0} />
       </Flex>
-      <CommandInfo title="Кол-во 3 мест:" value={third_places} />
+      <CommandInfo title="Кол-во 3 мест:" value={third_places ?? 0} />
     </div>
   );
 };

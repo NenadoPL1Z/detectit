@@ -69,7 +69,7 @@ export const CommandByIdPage = () => {
           )}
           {!isState && (
             <>
-              <CommandPhoto total_points={game.total_points} />
+              <CommandPhoto rank={game.rank} />
               <CommandContent {...game} />
             </>
           )}
