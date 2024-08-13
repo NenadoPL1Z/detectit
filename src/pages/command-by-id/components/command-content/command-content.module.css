@@ -50,3 +50,32 @@
     gap: 10px;
   }
 }
+
+@media (max-width: 500px) {
+  .container {
+    padding: 5px 10px;
+  }
+
+  .logo-container {
+    gap: 8px;
+  }
+  .logo {
+    width: 40px;
+    height: 40px;
+  }
+
+  .report {
+    font-size: 12px;
+    line-height: 12px;
+  }
+
+  .case {
+    font-size: 12px;
+    line-height: 12px;
+  }
+
+  .row {
+    max-width: 210px;
+    gap: 15px;
+  }
+}

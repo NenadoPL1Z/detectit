@@ -52,3 +52,21 @@
     height: 106px;
   }
 }
+
+
+
+@media (max-width: 500px) {
+  .rank-wrapper {
+    width: 74px;
+    height: 94px;
+    border: 2px solid var(--white);
+
+    right: 5px;
+    top: 5px;
+  }
+
+  .rank-image {
+    width: 70px;
+    height: 90px;
+  }
+}
