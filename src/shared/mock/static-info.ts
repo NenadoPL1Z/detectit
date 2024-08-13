@@ -13,5 +13,5 @@ export const staticInfo = {
     call: "+79210956049",
   },
   vk: "https://vk.com/detectitspb",
-  inst: "https://www.instagram.com/",
+  inst: "https://www.instagram.com/detectitspb?igsh=NmxlcWhleDBvejBh",
 };
