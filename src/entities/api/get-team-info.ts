@@ -1,4 +1,4 @@
 import { apiInstance } from "@shared/lib";
-import { GameModel } from "@shared/types";
+import { TeamModel } from "@shared/types";
 
-export const apiGetTeamInfo = (team: string) => apiInstance.get<GameModel>(`/statistic/team?team=${team + ""}`);
+export const apiGetTeamInfo = (team: string) => apiInstance.get<TeamModel>(`/statistic/team?team=${team + ""}`);
