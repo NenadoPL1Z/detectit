@@ -112,6 +112,20 @@
     font-size: 32px;
     line-height: 32px;
   }
+
+  .spinner {
+    width: 30px;
+    height: 30px;
+  }
+
+  .error {
+    font-size: 12px;
+  }
+
+  .error-button {
+    font-size: 12px;
+    padding: 5px;
+  }
 }
 
 @media (max-width: 360px) {

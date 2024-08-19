@@ -10,7 +10,9 @@ import { useNavigate } from "react-router-dom";
 
 export const CommandByIdPage = () => {
   const navigate = useNavigate();
-  const { isLoading, isError, team, getTeamInfo } = useCommandById();
+  const { team, getTeamInfo } = useCommandById();
+  const isLoading = false;
+  const isError = true;
 
   return (
     <Flex tag="section" className={styles.container} align="center" grow={1}>
@@ -18,7 +20,7 @@ export const CommandByIdPage = () => {
         статистика команды
       </Typography>
       <Typography variant="m500" className={styles.subtitle}>
-        {isLoading ? "Загрузка..." : isError ? "Ошибка" : team.team}
+        {isLoading ? "Загрузка..." : isError ? "..." : team.team}
       </Typography>
       <Flex className={styles.content} vertical={false}>
         <div className={styles.left}>
@@ -33,7 +35,9 @@ export const CommandByIdPage = () => {
                   <Typography variant="m500" color="black" className={styles.error}>
                     Что-то пошло не так
                   </Typography>
-                  <Button onClick={getTeamInfo}>ПОПРОБОВАТЬ ЕЩЕ РАЗ</Button>
+                  <Button className={styles["error-button"]} onClick={getTeamInfo}>
+                    ПОПРОБОВАТЬ ЕЩЕ РАЗ
+                  </Button>
                 </Flex>
               )}
             </Flex>
