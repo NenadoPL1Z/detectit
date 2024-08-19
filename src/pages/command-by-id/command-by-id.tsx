@@ -10,9 +10,7 @@ import { useNavigate } from "react-router-dom";
 
 export const CommandByIdPage = () => {
   const navigate = useNavigate();
-  const { team, getTeamInfo } = useCommandById();
-  const isLoading = false;
-  const isError = true;
+  const { isLoading, isError, team, getTeamInfo } = useCommandById();
 
   return (
     <Flex tag="section" className={styles.container} align="center" grow={1}>
