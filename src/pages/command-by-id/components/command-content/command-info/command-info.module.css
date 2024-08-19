@@ -6,6 +6,10 @@
   display: inline-block;
   font-size: 24px;
   padding-bottom: 1px;
+  max-width: 300px;
+}
+
+.underline {
   border-bottom: 1px solid var(--black);
 }
 

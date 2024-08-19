@@ -17,9 +17,8 @@
   line-height: 31px;
 }
 
-.row {
-  max-width: 450px;
-  gap: 20px;
+.bottom {
+  margin-top: 30px;
 }
 
 @media (max-width: 1024px) {
@@ -45,9 +44,8 @@
     line-height: 16px;
   }
 
-  .row {
-    max-width: 300px;
-    gap: 10px;
+  .bottom {
+    margin-top: 0;
   }
 }
 
@@ -72,10 +70,5 @@
   .case {
     font-size: 12px;
     line-height: 12px;
-  }
-
-  .row {
-    max-width: 210px;
-    gap: 15px;
   }
 }
