@@ -11,7 +11,7 @@ export const TableBody = (props: TableBodyProps) => {
     <tr className={cn({ row: number % 10 == 0 && number !== 0 })}>
       <th className={cn(styles.body, styles.team, { "align-left": true })}>
         {number + 1}.&nbsp;&nbsp;&nbsp;
-        <Link to={`${NavigationRoutes.COMMANDS.path}/${team}`} state={props}>
+        <Link to={`${NavigationRoutes.COMMANDS.path}/${team}`}>
           <span>{team}</span>
         </Link>
       </th>
