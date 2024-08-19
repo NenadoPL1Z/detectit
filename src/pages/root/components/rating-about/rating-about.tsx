@@ -9,10 +9,7 @@ export const RatingAbout = () => {
   return (
     <section className={styles.about}>
       <Typography className={cn(styles.typography, styles["typography-first"])} variant="m500">
-        {staticInfo.about.firstParagraph}
-      </Typography>
-      <Typography className={cn(styles.typography)} variant="m500" wrap>
-        {staticInfo.about.secondParagraph}
+        {staticInfo.about}
       </Typography>
     </section>
   );
