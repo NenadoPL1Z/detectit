@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { TeamModel } from "@shared/types";
 import { TEAM_MOCK } from "./constants";
 import { apiGetTeamInfo } from "@entities/api";
+import { getHeaderHeight } from "./helpers";
 
 export const useCommandById = () => {
   const { id } = useParams();
@@ -35,7 +36,7 @@ export const useCommandById = () => {
   };
 
   useEffect(() => {
-    window.scrollTo({ top: 0 });
+    window.scrollTo({ top: getHeaderHeight() });
     getTeamInfo().finally();
   }, []);
 
