@@ -69,6 +69,7 @@ export const useRatingGames = () => {
   }, []);
 
   return {
+    games,
     isDisplayLoading,
     isDisplayEmpty,
     isDisplayError,

@@ -5,7 +5,6 @@ export type TableFooterProps = Pick<
   | "isDisplayEmpty"
   | "isDisplayError"
   | "isDisplayMore"
-  | "games"
   | "onRetry"
   | "onLoadMore"
   | "onClear"

@@ -6,6 +6,7 @@ import { useRatingGames } from "./use-rating-games";
 
 export const RatingGames = () => {
   const {
+    games,
     gamesDisplayed,
     localSearch,
     setLocalSearch,
@@ -34,7 +35,8 @@ export const RatingGames = () => {
         </Flex>
       </form>
       <GamesTable
-        games={gamesDisplayed}
+        gamesOriginal={games}
+        gamesDisplay={gamesDisplayed}
         onLoadMore={handleLoadMore}
         onRetry={handleRetry}
         onClear={handleClear}

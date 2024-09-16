@@ -1,7 +1,8 @@
 import { GameModel } from "@shared/types";
 
 export type GamesTableProps = {
-  games: GameModel[];
+  gamesOriginal: GameModel[];
+  gamesDisplay: GameModel[];
   isDisplayLoading: boolean;
   isDisplayEmpty: boolean;
   isDisplayError: boolean;
