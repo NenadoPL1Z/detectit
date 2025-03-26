@@ -3,6 +3,7 @@
   background-image: url("public/assets/images/table-bg.png");
   background-size: cover;
   background-repeat: no-repeat;
+  border-radius: 10px;
 }
 
 .table {

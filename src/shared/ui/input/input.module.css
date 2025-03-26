@@ -12,6 +12,8 @@
   font-family: "Montserrat", sans-serif;
   font-size: 18px;
   font-weight: 400;
+
+  border-radius: 10px;
 }
 
 .input::placeholder {
