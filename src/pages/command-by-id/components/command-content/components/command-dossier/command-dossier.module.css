@@ -9,6 +9,7 @@
     transform: rotate(6deg);
 
     background-color: #ddd6cb;
+    border-radius: 20px;
 }
 
 .wrapper {

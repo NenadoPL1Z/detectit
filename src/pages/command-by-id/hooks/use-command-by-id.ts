@@ -34,12 +34,16 @@ export const useCommandById = () => {
   };
 
   useEffect(() => {
-    window.scrollTo({
-      top: document.querySelector("header")?.getBoundingClientRect().height ?? 0,
-    });
-
     refresh().finally();
   }, []);
+
+  useEffect(() => {
+    if (command) {
+      window.scrollTo({
+        top: document.querySelector("header")?.getBoundingClientRect().height ?? 0,
+      });
+    }
+  }, [command]);
 
   return {
     isLoading,
