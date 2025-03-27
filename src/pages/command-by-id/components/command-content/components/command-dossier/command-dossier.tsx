@@ -12,7 +12,7 @@ export const CommandDossier = ({
   prize_places,
 }: CommandDossierProps) => {
   return (
-    <div className={styles.container}>
+    <>
       <DossierPhoto rank={rank} />
       <div className={styles.wrapper}>
         <Flex vertical={false} align="center" className={styles.logo}>
@@ -34,6 +34,6 @@ export const CommandDossier = ({
           <DossierInfo title="Призовые места:" value={prize_places ?? 0} />
         </Flex>
       </div>
-    </div>
+    </>
   );
 };

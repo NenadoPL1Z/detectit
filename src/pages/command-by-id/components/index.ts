@@ -1,2 +1,2 @@
-export { CommandStatus } from "./command-status";
+export { CommandError } from "./command-error";
 export { CommandContent } from "./command-content";

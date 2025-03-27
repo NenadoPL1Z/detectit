@@ -2,6 +2,7 @@ import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { CommandModel } from "@shared/types";
 import { apiGetCommandInfo } from "@entities/api";
+import { scrollToContent } from "./helpers";
 
 export const useCommandById = () => {
   const { id } = useParams();
@@ -34,16 +35,9 @@ export const useCommandById = () => {
   };
 
   useEffect(() => {
+    scrollToContent();
     refresh().finally();
   }, []);
-
-  useEffect(() => {
-    if (command) {
-      window.scrollTo({
-        top: document.querySelector("header")?.getBoundingClientRect().height ?? 0,
-      });
-    }
-  }, [command]);
 
   return {
     isLoading,

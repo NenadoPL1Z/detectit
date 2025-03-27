@@ -1,11 +1,9 @@
 import { Button, Flex, Typography } from "@shared/ui";
-import styles from "./command-status.module.css";
-import { CommandStatusProps } from "./types";
-import Spinner from "@shared/assets/icons/spinner.svg?react";
+import styles from "./command-error.module.css";
+import { CommandErrorProps } from "./types";
 
-export const CommandStatus = ({ isLoading, isError, refresh }: CommandStatusProps) => (
+export const CommandError = ({ isError, refresh }: CommandErrorProps) => (
   <Flex align="center" justify="center" grow={1}>
-    {isLoading && <Spinner className={styles.spinner} />}
     {isError && (
       <Flex className={styles.error} align="center">
         <Typography variant="b700" color="white" className={styles["error-text"]}>

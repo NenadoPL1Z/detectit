@@ -1,5 +1,6 @@
 import { CommandModel } from "@shared/types";
 
 export type CommandContentProps = {
-  command: CommandModel;
+  isLoading: boolean;
+  command: CommandModel | null;
 };
