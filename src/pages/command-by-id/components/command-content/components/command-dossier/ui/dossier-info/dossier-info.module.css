@@ -4,9 +4,9 @@
 
 .title {
     display: inline-block;
+    max-width: 300px;
     font-size: 24px;
     padding-bottom: 1px;
-    max-width: 300px;
     text-transform: uppercase;
 }
 
@@ -15,8 +15,8 @@
 }
 
 .value {
-    padding-top: 5px;
     font-size: 24px;
+    padding-top: 5px;
     text-transform: uppercase;
 }
 

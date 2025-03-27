@@ -15,8 +15,8 @@ export const CommandDossier = ({
     <div className={styles.container}>
       <DossierPhoto rank={rank} />
       <div className={styles.wrapper}>
-        <Flex vertical={false} align="center" className={styles["logo-container"]}>
-          <LogoDark className={styles.logo} />
+        <Flex vertical={false} align="center" className={styles.logo}>
+          <LogoDark className={styles["logo-icon"]} />
           <div>
             <Typography variant="m700" color="black" className={styles.report}>
               Отчет детектива
@@ -28,7 +28,7 @@ export const CommandDossier = ({
         </Flex>
         <DossierInfo title="Звание:" value={rank} underline />
         <DossierInfo title="Всего игр:" value={total_games ?? 0} />
-        <Flex vertical className={styles.bottom}>
+        <Flex vertical className={styles["last-info"]}>
           <DossierInfo title="Процент правильных ответов:" value={correct_answers_percentage ?? 0} />
           <DossierInfo title="Взято секретов:" value={secrets_taken ?? 0} />
           <DossierInfo title="Призовые места:" value={prize_places ?? 0} />
