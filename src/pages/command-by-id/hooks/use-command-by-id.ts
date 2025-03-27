@@ -1,14 +1,12 @@
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { TeamModel } from "@shared/types";
-import { TEAM_MOCK } from "./constants";
-import { apiGetTeamInfo } from "@entities/api";
-import { getHeaderHeight } from "./helpers";
+import { CommandModel } from "@shared/types";
+import { apiGetCommandInfo } from "@entities/api";
 
 export const useCommandById = () => {
   const { id } = useParams();
 
-  const [team, setTeam] = useState<TeamModel>(TEAM_MOCK);
+  const [command, setCommand] = useState<CommandModel | null>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [isError, setIsError] = useState(false);
 
@@ -17,7 +15,7 @@ export const useCommandById = () => {
     setIsError(true);
   };
 
-  const getTeamInfo = async () => {
+  const refresh = async () => {
     setIsLoading(true);
     setIsError(false);
 
@@ -26,9 +24,9 @@ export const useCommandById = () => {
       return;
     }
 
-    apiGetTeamInfo(id)
+    apiGetCommandInfo(id)
       .then((response) => {
-        setTeam(response.data);
+        setCommand(response.data);
         setIsLoading(false);
         setIsError(false);
       })
@@ -36,14 +34,17 @@ export const useCommandById = () => {
   };
 
   useEffect(() => {
-    window.scrollTo({ top: getHeaderHeight() });
-    getTeamInfo().finally();
+    window.scrollTo({
+      top: document.querySelector("header")?.getBoundingClientRect().height ?? 0,
+    });
+
+    refresh().finally();
   }, []);
 
   return {
     isLoading,
     isError,
-    team,
-    getTeamInfo,
+    command,
+    refresh,
   };
 };

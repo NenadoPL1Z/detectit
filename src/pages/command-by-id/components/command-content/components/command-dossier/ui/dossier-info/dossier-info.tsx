@@ -1,11 +1,11 @@
-import styles from "./command-info.module.css";
-import { CommandInfoProps } from "./types";
+import styles from "./dossier-info.module.css";
+import { DossierInfoProps } from "./types";
 import { Typography } from "@shared/ui";
 import classnames from "classnames/bind";
 
 const cn = classnames.bind(styles);
 
-export const CommandInfo = ({ title, value, underline }: CommandInfoProps) => {
+export const DossierInfo = ({ title, value, underline }: DossierInfoProps) => {
   return (
     <div className={styles.container}>
       <Typography variant="m700" color="black" className={cn(styles.title, { underline })}>

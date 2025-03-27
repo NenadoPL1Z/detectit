@@ -8,7 +8,7 @@ export type GameModel = {
   readonly rank: string;
 };
 
-export type TeamModel = {
+export type CommandModel = {
   readonly team: string;
   readonly total_games: number;
   readonly rank: string;

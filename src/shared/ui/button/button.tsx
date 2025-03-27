@@ -4,6 +4,6 @@ import classnames from "classnames/bind";
 
 const cn = classnames.bind(styles);
 
-export const Button = ({ className, ...props }: ButtonProps) => {
-  return <button className={cn(styles.button, className)} {...props} />;
+export const Button = ({ inverted, className, ...props }: ButtonProps) => {
+  return <button className={cn(styles.button, className, { inverted: Boolean(inverted) })} {...props} />;
 };

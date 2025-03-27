@@ -1,0 +1,49 @@
+.container {
+    margin-top: 30px;
+}
+
+.title {
+    display: inline-block;
+    font-size: 24px;
+    padding-bottom: 1px;
+    max-width: 300px;
+    text-transform: uppercase;
+}
+
+.underline {
+    border-bottom: 1px solid var(--black);
+}
+
+.value {
+    padding-top: 5px;
+    font-size: 24px;
+    text-transform: uppercase;
+}
+
+@media (max-width: 1024px) {
+    .container {
+        margin-top: 15px;
+    }
+
+    .title {
+        font-size: 16px;
+    }
+
+    .value {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 500px) {
+    .container {
+        margin-top: 10px;
+    }
+
+    .title {
+        font-size: 12px;
+    }
+
+    .value {
+        font-size: 12px;
+    }
+}
